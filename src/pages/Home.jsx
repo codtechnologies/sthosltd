@@ -68,6 +68,7 @@ export default function Home() {
               {/* Main Heading */}
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-white">
                 Reliable Marine Communication. <br className="hidden sm:inline" />
+                Reliable Marine Communication. <br className="hidden sm:inline" />
                 Advanced Navigation. <br className="hidden sm:inline" />
                 <span className="text-[#E9231B]">Trusted Technical Support.</span>
               </h1>
@@ -136,30 +137,6 @@ export default function Home() {
         <div className="absolute bottom-0 inset-x-0 bg-[#040E1E] border-t border-white/10 py-3.5 z-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 divide-y md:divide-y-0 md:divide-x divide-white/10 text-xs text-gray-300">
-              <div className="flex items-center space-x-3 py-1 md:py-0 px-2">
-                <MapPin className="w-4 h-4 text-[#E9231B] shrink-0" />
-                <div>
-                  <span className="text-[10px] text-gray-400 block uppercase tracking-wider font-semibold">Base Location</span>
-                  <span className="font-bold text-white text-xs">Port Harcourt, Nigeria</span>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-3 py-1 md:py-0 px-2 md:pl-6">
-                <PhoneCall className="w-4 h-4 text-[#E9231B] shrink-0" />
-                <div>
-                  <span className="text-[10px] text-gray-400 block uppercase tracking-wider font-semibold">Emergency Hotline</span>
-                  <span className="font-bold text-white text-xs">24/7 Rapid Response</span>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-3 py-1 md:py-0 px-2 md:pl-6">
-                <ShieldCheck className="w-4 h-4 text-[#E9231B] shrink-0" />
-                <div>
-                  <span className="text-[10px] text-gray-400 block uppercase tracking-wider font-semibold">Class Accreditation</span>
-                  <span className="font-bold text-white text-xs">DNV · ABS · BV · LR · NIMASA</span>
-                </div>
-              </div>
-
               <div className="flex items-center space-x-3 py-1 md:py-0 px-2 md:pl-6">
                 <Anchor className="w-4 h-4 text-[#E9231B] shrink-0" />
                 <div>
@@ -264,46 +241,44 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* 6 Service Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* 6 Service Cards Grid — image-free */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {homeServices.map((service) => {
               const IconComponent = iconMap[service.icon] || Compass;
               return (
-                <div 
+                <div
                   key={service.id}
-                  className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100 hover:-translate-y-1"
+                  className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100 hover:-translate-y-1 p-6"
                 >
-                  <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#071A35]/80 via-transparent to-transparent" />
-                    <div className="absolute bottom-4 left-4 w-10 h-10 rounded-lg bg-[#E9231B] text-white flex items-center justify-center shadow-md">
-                      <IconComponent className="w-5 h-5" />
+                  {/* Icon + Category */}
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-[#071A35] text-[#E9231B] flex items-center justify-center shrink-0 group-hover:bg-[#E9231B] group-hover:text-white transition-colors">
+                      <IconComponent className="w-6 h-6" />
                     </div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#E9231B] bg-[#E9231B]/10 px-2 py-1 rounded">
+                      {service.category}
+                    </span>
                   </div>
 
-                  <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                    <div>
-                      <h3 className="text-lg font-bold text-[#071A35] group-hover:text-[#E9231B] transition-colors mb-2">
-                        {service.title}
-                      </h3>
-                      <p className="text-sm text-gray-600 leading-relaxed">
-                        {service.shortDesc}
-                      </p>
-                    </div>
+                  {/* Title & Description */}
+                  <div className="flex-1 space-y-2">
+                    <h3 className="text-lg font-bold text-[#071A35] group-hover:text-[#E9231B] transition-colors leading-snug">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {service.shortDesc}
+                    </p>
+                  </div>
 
-                    <div className="pt-2 border-t border-gray-100">
-                      <Link 
-                        to="/services" 
-                        className="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-[#071A35] group-hover:text-[#E9231B] transition-colors"
-                      >
-                        <span>Explore Discipline</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
-                    </div>
+                  {/* CTA */}
+                  <div className="pt-4 mt-4 border-t border-gray-100">
+                    <Link
+                      to="/services"
+                      className="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-[#071A35] group-hover:text-[#E9231B] transition-colors"
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
                   </div>
                 </div>
               );
@@ -354,9 +329,9 @@ export default function Home() {
       </section>
 
       {/* SECTION 5: MARINE EQUIPMENT SHOWCASE */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      {/* <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> */}
+          {/* <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
               <div className="inline-flex items-center space-x-2 text-[#E9231B] font-bold text-xs uppercase tracking-wider mb-2">
                 <Radio className="w-4 h-4" />
@@ -376,10 +351,10 @@ export default function Home() {
               <span>Explore All Equipment</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
+          </div> */}
 
           {/* Equipment Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredEquipment.map((eq) => (
               <div 
                 key={eq.id}
@@ -418,73 +393,54 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
 
-          {/* Supported Brands Bar */}
-          <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-6">
-            <span className="text-xs font-bold uppercase tracking-wider text-gray-500">
-              Authorized Partner & Supported Brands:
-            </span>
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              {COMPANY_INFO.brands.map((brand, idx) => (
-                <span 
-                  key={idx} 
-                  className="bg-[#F4F6F8] px-3.5 py-1.5 rounded-md text-xs font-bold text-[#071A35] border border-gray-200"
-                >
-                  {brand}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+        {/* </div>
+      </section> */}
 
       {/* SECTION 6: INDUSTRIES WE SERVE */}
-      <section className="py-20 bg-[#F4F6F8]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#E9231B]">
-              Market Sectors
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#071A35] tracking-tight">
-              Supporting Every Corner of the Maritime Industry
-            </h2>
-            <p className="text-sm text-gray-600">
-              From a single repair to a full fleet upgrade, we support operators who cannot afford communication or navigation failures.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {INDUSTRIES_SERVED.map((ind, idx) => (
-              <div 
-                key={idx}
-                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gray-200 group flex flex-col"
-              >
-                <div className="h-44 overflow-hidden relative">
-                  <img 
-                    src={ind.image} 
-                    alt={ind.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071A35]/80 via-transparent to-transparent" />
-                  <h3 className="absolute bottom-3 left-4 text-base font-bold text-white">
-                    {ind.title}
-                  </h3>
-                </div>
-                <div className="p-5 flex-1 flex flex-col justify-between">
-                  <p className="text-xs text-gray-600 leading-relaxed">
-                    {ind.desc}
-                  </p>
-                  <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-[#E9231B] font-semibold">
-                    <span>Tailored Fleet Solutions</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </div>
-                </div>
-              </div>
-            ))}
+<section className="py-20 bg-[#F4F6F8]">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+      <span className="text-xs font-bold uppercase tracking-wider text-[#E9231B]">
+        Market Sectors
+      </span>
+
+      <h2 className="text-2xl sm:text-4xl font-extrabold text-[#071A35] tracking-tight">
+        Supporting Every Corner of the Maritime Industry
+      </h2>
+      {/* <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+        From a single repair to a full fleet upgrade, we support operators who cannot afford communication or navigation failures.
+      </p> */}
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {INDUSTRIES_SERVED.map((ind, idx) => (
+        <div
+          key={idx}
+          className="bg-white rounded-xl p-7 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-[#E9231B]/40 group"
+        >
+          <div className="w-10 h-1 bg-[#E9231B] rounded-full mb-5 group-hover:w-16 transition-all duration-300" />
+
+          <h3 className="text-lg font-bold text-[#071A35] mb-3">
+            {ind.title}
+          </h3>
+
+          <p className="text-sm text-gray-600 leading-relaxed">
+            {ind.desc}
+          </p>
+
+          <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-[#E9231B] font-semibold">
+            <span>Tailored Maritime Solutions</span>
+            <ArrowRight className="w-4 h-4" />
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* SECTION 7: CALL TO ACTION BANNER */}
       <section className="py-20 bg-gradient-to-r from-[#071A35] via-[#123B67] to-[#071A35] text-white relative overflow-hidden">

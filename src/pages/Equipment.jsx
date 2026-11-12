@@ -113,50 +113,42 @@ export default function Equipment() {
               {filteredEquipment.map((item) => (
                 <div
                   key={item.id}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200/80 flex flex-col justify-between group"
+                  className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-200/80 flex flex-col justify-between group p-6"
                 >
-                  <div>
-                    <div className="relative h-52 overflow-hidden bg-gray-100">
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute top-3 left-3 bg-[#071A35]/90 text-white text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded">
+                  <div className="space-y-3">
+                    {/* Brand + Tag badges */}
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="bg-[#071A35] text-white text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded">
                         {item.brand}
-                      </div>
-                      <div className="absolute top-3 right-3 bg-[#E9231B] text-white text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded">
+                      </span>
+                      <span className="bg-[#E9231B] text-white text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded">
                         {item.tag}
-                      </div>
+                      </span>
                     </div>
 
-                    <div className="p-6 space-y-2">
-                      <span className="text-[11px] uppercase font-bold text-[#E9231B] tracking-wider block">
-                        {item.category}
-                      </span>
-                      <h3 className="text-lg font-bold text-[#071A35] group-hover:text-[#E9231B] transition-colors leading-snug">
-                        {item.name}
-                      </h3>
-                      <p className="text-xs text-gray-600 leading-relaxed pt-1">
-                        {item.description}
-                      </p>
-                    </div>
+                    <span className="text-[11px] uppercase font-bold text-[#E9231B] tracking-wider block">
+                      {item.category}
+                    </span>
+                    <h3 className="text-lg font-bold text-[#071A35] group-hover:text-[#E9231B] transition-colors leading-snug">
+                      {item.name}
+                    </h3>
+                    <p className="text-xs text-gray-600 leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
 
-                  <div className="p-6 pt-0 border-t border-gray-100 mt-4">
-                    <div className="pt-4 flex items-center justify-between">
-                      <span className="text-[11px] font-semibold text-gray-400">
-                        Class Certified
-                      </span>
-                      <Link
-                        to="/contact"
-                        state={{ equipment: item.name }}
-                        className="inline-flex items-center space-x-1.5 text-xs uppercase tracking-wider font-bold text-[#E9231B] hover:text-[#C21A13]"
-                      >
-                        <span>Enquire Now</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
+                  <div className="pt-4 mt-4 border-t border-gray-100 flex items-center justify-between">
+                    <span className="text-[11px] font-semibold text-gray-400">
+                      Class Certified
+                    </span>
+                    <Link
+                      to="/contact"
+                      state={{ equipment: item.name }}
+                      className="inline-flex items-center space-x-1.5 text-xs uppercase tracking-wider font-bold text-[#E9231B] hover:text-[#C21A13]"
+                    >
+                      <span>Enquire Now</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
                   </div>
                 </div>
               ))}

@@ -3,22 +3,23 @@ export const COMPANY_INFO = {
   tagline: "Marine Communication & Navigation Systems",
   headquarters: "Port Harcourt, Rivers State, Nigeria",
   addressPlaceholder: "Trans-Amadi Industrial Layout, Port Harcourt, Rivers State, Nigeria",
-  salesPhone: "+234 801 234 5678",
-  technicalPhone: "+234 809 888 7777",
-  emergencyHotline: "+234 809 999 9999",
-  primaryEmail: "info@sthosltd.com",
-  technicalEmail: "support@sthosltd.com",
-  trainingEmail: "training@sthosltd.com",
+  salesPhone: "+234 807 323 4834",
+  technicalPhone: "+234 807 323 4834",
+  emergencyHotline: "+234 807 323 4834",
+  primaryEmail: "service@sthosltd.com",
+  technicalEmail: "service@sthosltd.com",
+  trainingEmail: "service@sthosltd.com",
   businessHours: "Monday – Friday: 8:00 AM – 5:00 PM WAT",
   emergencyAvailability: "24/7/365 On-Call Dispatch across Gulf of Guinea",
-  classSocieties: ["DNV", "ABS", "Bureau Veritas", "Lloyd's Register", "NIMASA Approved"],
-  brands: ["Furuno", "Sailor", "Icom", "JRC", "Kelvin Hughes", "Standard Horizon", "Inmarsat", "Iridium"],
+  classSocieties: ["DNV", "ABS"],
+  brands: ["Furuno", "Sailor", "Icom"],
   heroImages: {
     bridge: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=80",
-    vesselAtSea: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1920&q=80",
+    vesselAtSea: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1200&q=80",
     offshorePlatform: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80",
     radarScreen: "https://images.unsplash.com/photo-1516116211227-bbc0372df3e2?auto=format&fit=crop&w=1200&q=80",
-    marineEngineer: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80",
+    marineEngineer: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80",
+    whoWeAre: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=1200&q=80",
     cargoShip: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1200&q=80",
     workboat: "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=1200&q=80"
   }
@@ -32,7 +33,7 @@ export const SERVICES_DATA = [
     fullDesc: "Complete supply, installation, programming and testing of marine radio stations meeting SOLAS Sea Area A1 to A4 requirements. We ensure uninterrupted voice and digital selective calling (DSC) for routine and distress communications.",
     icon: "Radio",
     category: "Communication",
-    image: "https://images.unsplash.com/photo-1516116211227-bbc0372df3e2?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1516305408620-7a9076a0f6ed?auto=format&fit=crop&w=800&q=80",
     features: [
       "Fixed and portable VHF/DSC transceivers",
       "Medium & High Frequency (MF/HF) SSB systems with automated tuner",
@@ -192,78 +193,78 @@ export const EQUIPMENT_DATA = [
     image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80",
     tag: "IEC 61174 Paperless"
   },
-  {
-    id: "eq-5",
-    name: "JRC JCY-1900 Voyage Data Recorder",
-    category: "Navigation Systems",
-    brand: "JRC",
-    description: "Black box VDR meeting latest IMO performance standards, recording bridge audio, radar data, ECDIS images, and engine telemetry.",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
-    tag: "IMO Compliant VDR"
-  },
-  {
-    id: "eq-6",
-    name: "Icom IC-M804 MF/HF Marine Transceiver",
-    category: "VHF & MF/HF Radio",
-    brand: "Icom",
-    description: "Class E DSC marine radio with clear voice DSP, remote control head, and dedicated distress alert button.",
-    image: "https://images.unsplash.com/photo-1516116211227-bbc0372df3e2?auto=format&fit=crop&w=600&q=80",
-    tag: "Long-Range SSB"
-  },
-  {
-    id: "eq-7",
-    name: "Sailor 6110 mini-C GMDSS System",
-    category: "GMDSS Equipment",
-    brand: "Sailor",
-    description: "Inmarsat-C satellite terminal supporting SSAS, LRIT, and SOLAS distress safety messaging in a compact, durable unit.",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80",
-    tag: "SSAS & LRIT Ready"
-  },
-  {
-    id: "eq-8",
-    name: "Jotron Tron 60AIS EPIRB",
-    category: "EPIRB & SART Safety",
-    brand: "Jotron",
-    description: "Cospas-Sarsat 406MHz emergency position-indicating beacon with integrated AIS homing transmitter and GNSS receiver.",
-    image: "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=600&q=80",
-    tag: "406 MHz + AIS"
-  },
-  {
-    id: "eq-9",
-    name: "Jotron Tron SART20 Radar Transponder",
-    category: "EPIRB & SART Safety",
-    brand: "Jotron",
-    description: "9GHz search and rescue radar transponder engineered for survival craft, locating lifeboats on 3cm marine radar screens.",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=600&q=80",
-    tag: "9GHz SOLAS SART"
-  },
-  {
-    id: "eq-10",
-    name: "Iridium Certus Marine Satcom Terminal",
-    category: "Satellite Communication",
-    brand: "Iridium",
-    description: "True global coverage L-band satellite broadband delivering reliable high-definition voice, email, weather data, and crew internet.",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
-    tag: "Pole-to-Pole Comms"
-  },
-  {
-    id: "eq-11",
-    name: "Furuno FA-170 Class A AIS",
-    category: "AIS Systems",
-    brand: "Furuno",
-    description: "Color LCD Class A AIS transponder displaying targets, safety text messages, collision warnings (CPA/TCPA), and GNSS data.",
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80",
-    tag: "Class A Verified"
-  },
-  {
-    id: "eq-12",
-    name: "Simrad GC80 Gyrocompass System",
-    category: "Navigation Systems",
-    brand: "Simrad",
-    description: "Compact, maintenance-friendly gyro compass offering true heading precision with digital and analogue stepper outputs.",
-    image: "https://images.unsplash.com/photo-1516116211227-bbc0372df3e2?auto=format&fit=crop&w=600&q=80",
-    tag: "True Heading Master"
-  }
+  // {
+  //   id: "eq-5",
+  //   name: "JRC JCY-1900 Voyage Data Recorder",
+  //   category: "Navigation Systems",
+  //   brand: "JRC",
+  //   description: "Black box VDR meeting latest IMO performance standards, recording bridge audio, radar data, ECDIS images, and engine telemetry.",
+  //   image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
+  //   tag: "IMO Compliant VDR"
+  // },
+  // {
+  //   id: "eq-6",
+  //   name: "Icom IC-M804 MF/HF Marine Transceiver",
+  //   category: "VHF & MF/HF Radio",
+  //   brand: "Icom",
+  //   description: "Class E DSC marine radio with clear voice DSP, remote control head, and dedicated distress alert button.",
+  //   image: "https://images.unsplash.com/photo-1516116211227-bbc0372df3e2?auto=format&fit=crop&w=600&q=80",
+  //   tag: "Long-Range SSB"
+  // },
+  // {
+  //   id: "eq-7",
+  //   name: "Sailor 6110 mini-C GMDSS System",
+  //   category: "GMDSS Equipment",
+  //   brand: "Sailor",
+  //   description: "Inmarsat-C satellite terminal supporting SSAS, LRIT, and SOLAS distress safety messaging in a compact, durable unit.",
+  //   image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80",
+  //   tag: "SSAS & LRIT Ready"
+  // },
+  // {
+  //   id: "eq-8",
+  //   name: "Jotron Tron 60AIS EPIRB",
+  //   category: "EPIRB & SART Safety",
+  //   brand: "Jotron",
+  //   description: "Cospas-Sarsat 406MHz emergency position-indicating beacon with integrated AIS homing transmitter and GNSS receiver.",
+  //   image: "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=600&q=80",
+  //   tag: "406 MHz + AIS"
+  // },
+  // {
+  //   id: "eq-9",
+  //   name: "Jotron Tron SART20 Radar Transponder",
+  //   category: "EPIRB & SART Safety",
+  //   brand: "Jotron",
+  //   description: "9GHz search and rescue radar transponder engineered for survival craft, locating lifeboats on 3cm marine radar screens.",
+  //   image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=600&q=80",
+  //   tag: "9GHz SOLAS SART"
+  // },
+  // {
+  //   id: "eq-10",
+  //   name: "Iridium Certus Marine Satcom Terminal",
+  //   category: "Satellite Communication",
+  //   brand: "Iridium",
+  //   description: "True global coverage L-band satellite broadband delivering reliable high-definition voice, email, weather data, and crew internet.",
+  //   image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
+  //   tag: "Pole-to-Pole Comms"
+  // },
+  // {
+  //   id: "eq-11",
+  //   name: "Furuno FA-170 Class A AIS",
+  //   category: "AIS Systems",
+  //   brand: "Furuno",
+  //   description: "Color LCD Class A AIS transponder displaying targets, safety text messages, collision warnings (CPA/TCPA), and GNSS data.",
+  //   image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80",
+  //   tag: "Class A Verified"
+  // },
+  // {
+  //   id: "eq-12",
+  //   name: "Simrad GC80 Gyrocompass System",
+  //   category: "Navigation Systems",
+  //   brand: "Simrad",
+  //   description: "Compact, maintenance-friendly gyro compass offering true heading precision with digital and analogue stepper outputs.",
+  //   image: "https://images.unsplash.com/photo-1516116211227-bbc0372df3e2?auto=format&fit=crop&w=600&q=80",
+  //   tag: "True Heading Master"
+  // }
 ];
 
 export const INDUSTRIES_SERVED = [

@@ -90,7 +90,7 @@ export default function Header() {
                 STHOS<span className="text-[#E9231B]">.</span>
               </span>
               <span className="text-[10px] uppercase tracking-widest text-[#5B6B82] font-semibold mt-0.5">
-                Marine Specialists
+                Limited
               </span>
             </div>
           </Link>
@@ -107,7 +107,8 @@ export default function Header() {
             </Link>
             
             <Link 
-              to="/about" 
+              to="/" 
+              // to="/about" 
               className={`transition-colors py-2 ${
                 location.pathname === '/about' ? 'text-[#E9231B] border-b-2 border-[#E9231B]' : 'text-[#071A35] hover:text-[#E9231B]'
               }`}
@@ -122,7 +123,8 @@ export default function Header() {
               onMouseLeave={() => setServicesDropdown(false)}
             >
               <Link 
-                to="/services" 
+                // to="/services"
+                to="/"  
                 className={`flex items-center space-x-1 py-2 ${
                   location.pathname === '/services' || location.pathname.includes('certification') || location.pathname.includes('installation') || location.pathname.includes('maintenance') || location.pathname.includes('training') || location.pathname.includes('emergency')
                     ? 'text-[#E9231B] border-b-2 border-[#E9231B]' 
@@ -136,24 +138,40 @@ export default function Header() {
               {servicesDropdown && (
                 <div className="absolute top-full left-0 w-72 bg-white rounded-lg shadow-xl border border-gray-100 py-3 z-50">
                   <Link 
-                    to="/services" 
+                    // to="/services"
+                    to="/" 
                     className="block px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#E9231B] border-b border-gray-100 mb-1"
                   >
                     Services Overview &rarr;
                   </Link>
-                  <Link to="/class-certification/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                  <Link 
+                  // to="/class-certification/"
+                  to="/"
+                   className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     Class Certification
                   </Link>
-                  <Link to="/installation-integration/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                  <Link 
+                  // to="/installation-integration/"
+                  to="/"
+                   className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     Installation &amp; Integration
                   </Link>
-                  <Link to="/maintenance-repair/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                  <Link 
+                  // to="/maintenance-repair/"
+to="/"
+                   className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     Maintenance &amp; Repair
                   </Link>
-                  <Link to="/training-programs/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                  <Link 
+                  // to="/training-programs/"
+                  to="/"
+                   className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     Training Programs
                   </Link>
-                  <Link to="/emergency-support/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                  <Link 
+                  // to="/emergency-support/"
+                  to="/"
+                   className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     Emergency Support
                   </Link>
                 </div>
@@ -181,18 +199,28 @@ export default function Header() {
               {equipmentDropdown && (
                 <div className="absolute top-full left-0 w-72 bg-white rounded-lg shadow-xl border border-gray-100 py-3 z-50">
                   <Link 
-                    to="/equipment" 
+                    // to="/equipment" 
+                    to="/"
                     className="block px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#E9231B] border-b border-gray-100 mb-1"
                   >
                     Marine Equipment Overview &rarr;
                   </Link>
-                  <Link to="/gmdss-safety-equipment/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                  <Link 
+                  // to="/gmdss-safety-equipment/"
+                  to="/"
+                   className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     GMDSS &amp; Safety Equipment
                   </Link>
-                  <Link to="/navigational-equipment/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                  <Link 
+                  // to="/navigational-equipment/"
+                  to="/"
+                   className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     Navigational Equipment
                   </Link>
-                  <Link to="/communication-systems/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                  <Link 
+                  to="/"
+                  // to="/communication-systems/"
+                   className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     Communication Systems
                   </Link>
                 </div>
@@ -269,37 +297,53 @@ export default function Header() {
               <Link to="/class-certification/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • Class Certification
               </Link>
-              <Link to="/installation-integration/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+              <Link 
+              to="/"
+              // to="/installation-integration/"
+               onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • Installation &amp; Integration
               </Link>
-              <Link to="/maintenance-repair/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+              <Link to="/"
+              // to="/maintenance-repair/"
+               onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • Maintenance &amp; Repair
               </Link>
-              <Link to="/training-programs/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+              <Link to="/"
+              // to="/training-programs/"
+              onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • Training Programs
               </Link>
-              <Link to="/emergency-support/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+              <Link 
+              to="/"
+              // to="/emergency-support/"
+               onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • Emergency Support
               </Link>
             </div>
           </div>
 
           <div className="py-2 border-b border-gray-100 space-y-2">
-            <Link 
-              to="/equipment" 
+            <Link to="/"
+              // to="/equipment" 
               onClick={() => setMobileMenuOpen(false)}
               className="block text-base font-bold text-[#071A35] hover:text-[#E9231B]"
             >
               Equipment Overview
             </Link>
             <div className="pl-4 space-y-2 text-sm text-gray-700">
-              <Link to="/gmdss-safety-equipment/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+              <Link to="/"
+              //  to="/gmdss-safety-equipment/"
+                onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • GMDSS &amp; Safety Equipment
               </Link>
-              <Link to="/navigational-equipment/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+              <Link to="/"
+              // to="/navigational-equipment/"
+               onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • Navigational Equipment
               </Link>
-              <Link to="/communication-systems/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+              <Link to="/"
+              // to="/communication-systems/"
+               onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • Communication Systems
               </Link>
             </div>

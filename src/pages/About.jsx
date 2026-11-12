@@ -100,8 +100,8 @@ export default function About() {
             <div className="lg:col-span-5 relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#F4F6F8]">
                 <img 
-                  src={COMPANY_INFO.heroImages.vesselAtSea} 
-                  alt="Commercial vessel operating in West African waters"
+                  src={COMPANY_INFO.heroImages.whoWeAre} 
+                  alt="STHOS Limited marine engineering team at work"
                   className="w-full h-[480px] object-cover"
                 />
               </div>
@@ -199,12 +199,12 @@ export default function About() {
               "GMDSS Installation, Alignment & Maintenance",
               "Radio Surveys & Annual Performance Tests (VDR APT)",
               "AIS (Automatic Identification System) Fitout & Servicing",
-              "Radar Calibration, Magnetron Tuning & Overhauls",
-              "GPS & Electronic Chart Information Systems",
-              "EPIRB, SART & Emergency Beacon Certification",
-              "Gyrocompass & Magnetic Compass Calibration",
-              "Preventive Maintenance & Scheduled Servicing",
-              "Crew Operational & Emergency Training Programs"
+              // "Radar Calibration, Magnetron Tuning & Overhauls",
+              // "GPS & Electronic Chart Information Systems",
+              // "EPIRB, SART & Emergency Beacon Certification",
+              // "Gyrocompass & Magnetic Compass Calibration",
+              // "Preventive Maintenance & Scheduled Servicing",
+              // "Crew Operational & Emergency Training Programs"
             ].map((exp, idx) => (
               <div 
                 key={idx}

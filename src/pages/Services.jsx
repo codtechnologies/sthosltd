@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Radio, 
-  Compass, 
-  Cpu, 
-  Wrench, 
-  ShieldCheck, 
-  Clock, 
+import {
+  Radio,
+  Compass,
+  Cpu,
+  Wrench,
+  ShieldCheck,
+  Clock,
   AlertTriangle,
   GraduationCap,
-  ArrowRight, 
-  CheckCircle, 
+  ArrowRight,
+  CheckCircle,
   FileText,
   Phone,
   Settings
@@ -46,7 +46,7 @@ export default function Services() {
               <span>Full Technical Lifecycle Support</span>
             </div>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-              Marine Communication &amp; Navigation Services
+              Marine Communication & Navigation Services
             </h1>
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
               STHOS Ltd is your trusted one-stop partner for all marine electronics needs across Nigerian waters and the Gulf of Guinea — from regulatory compliance to long-term operational support.
@@ -90,25 +90,9 @@ export default function Services() {
                 id={service.id}
                 className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 p-6 sm:p-10 transition-shadow hover:shadow-xl"
               >
-                <div className={`grid grid-cols-1 lg:grid-cols-12 gap-10 items-center ${
-                  isEven ? '' : 'lg:flex-row-reverse'
-                }`}>
-                  {/* Image Column */}
-                  <div className={`lg:col-span-5 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
-                    <div className="relative rounded-xl overflow-hidden shadow-md h-72 lg:h-96">
-                      <img 
-                        src={service.image} 
-                        alt={service.title} 
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute top-4 left-4 bg-[#071A35]/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded">
-                        {service.category}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Content Column */}
-                  <div className={`lg:col-span-7 space-y-5 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                <div className={`grid grid-cols-1 lg:grid-cols-12 gap-10 items-center ${isEven ? '' : 'lg:flex-row-reverse'}`}>
+                  {/* Content Column (full width) */}
+                  <div className={`lg:col-span-12 space-y-5`}> 
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 rounded-xl bg-[#E9231B]/10 text-[#E9231B] flex items-center justify-center shrink-0">
                         <IconComponent className="w-6 h-6" />
@@ -197,4 +181,3 @@ export default function Services() {
     </div>
   );
 }
-
