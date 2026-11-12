@@ -7,10 +7,9 @@ import {
   MapPin, 
   Clock, 
   ShieldCheck, 
-  ArrowRight,
-  ExternalLink
+  ArrowRight
 } from 'lucide-react';
-import { COMPANY_INFO, SERVICES_DATA } from '../data/marineData';
+import { COMPANY_INFO } from '../data/marineData';
 
 export default function Footer() {
   return (
@@ -52,7 +51,7 @@ export default function Footer() {
             </div>
             <div>
               <span className="text-[11px] uppercase tracking-wider text-gray-400 font-medium block">
-                Office & Technical
+                Call Us 24/7
               </span>
               <span className="text-sm font-semibold block">{COMPANY_INFO.salesPhone}</span>
               <span className="text-xs text-gray-400 block">{COMPANY_INFO.technicalPhone}</span>
@@ -68,7 +67,7 @@ export default function Footer() {
                 Operating Hours
               </span>
               <span className="text-xs font-semibold block">{COMPANY_INFO.businessHours}</span>
-              <span className="text-[11px] text-[#E9231B] font-bold block mt-0.5">Emergency: 24/7/365</span>
+              <span className="text-[11px] text-[#E9231B] font-bold block mt-0.5">Emergency Support: 24/7/365</span>
             </div>
           </div>
         </div>
@@ -86,19 +85,18 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-gray-300 leading-relaxed max-w-sm">
-              Premier marine communication and navigational engineering firm headquartered in Port Harcourt, Rivers State. 
-              Serving vessel operators, FPSOs, offshore platforms, and shipyards throughout Nigeria and the Gulf of Guinea with accredited class survey certification and offshore field engineering.
+              Leading indigenous marine electronic engineering and navigation support specialist headquartered in Port Harcourt, Rivers State. Serving vessel operators, FPSOs, offshore platforms, and shipyards throughout the Gulf of Guinea with accredited class survey certification and offshore field engineering.
             </p>
             <div className="flex items-center space-x-2 text-xs text-gray-400">
               <MapPin className="w-4 h-4 text-[#E9231B] shrink-0" />
-              <span>{COMPANY_INFO.headquarters}</span>
+              <span>Port Harcourt Base, Rivers State, Nigeria</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="text-xs uppercase tracking-wider font-bold text-white mb-4">
-              Quick Navigation
+              Navigation
             </h4>
             <ul className="space-y-2.5 text-sm text-gray-300">
               <li>
@@ -114,95 +112,97 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-white transition-colors flex items-center space-x-1.5">
+                <Link to="/contact" className="hover:text-white transition-colors flex items-center space-x-1.5">
                   <ArrowRight className="w-3.5 h-3.5 text-[#E9231B]" />
-                  <span>Our Services</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="/equipment" className="hover:text-white transition-colors flex items-center space-x-1.5">
-                  <ArrowRight className="w-3.5 h-3.5 text-[#E9231B]" />
-                  <span>Marine Equipment</span>
+                  <span>Have Questions? Contact Us</span>
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-white transition-colors flex items-center space-x-1.5">
                   <ArrowRight className="w-3.5 h-3.5 text-[#E9231B]" />
-                  <span>Contact & Dispatch</span>
+                  <span>Request Marine Quote</span>
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Core Services */}
+          {/* Core Services Links Exactly as in PDF */}
           <div>
             <h4 className="text-xs uppercase tracking-wider font-bold text-white mb-4">
-              Key Disciplines
+              Services
             </h4>
             <ul className="space-y-2.5 text-sm text-gray-300">
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">
-                  Radio Surveys & Inspection
+                <Link to="/class-certification/" className="hover:text-white transition-colors">
+                  Class Certification
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">
-                  GMDSS & Safety Integration
+                <Link to="/installation-integration/" className="hover:text-white transition-colors">
+                  Installation &amp; Integration
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">
-                  Marine Radar & ECDIS Fitout
+                <Link to="/maintenance-repair/" className="hover:text-white transition-colors">
+                  Maintenance &amp; Repair
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">
-                  Gyrocompass & Sensor Overhauls
+                <Link to="/training-programs/" className="hover:text-white transition-colors">
+                  Training Programs
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">
-                  24/7 Offshore Dispatch
+                <Link to="/emergency-support/" className="hover:text-white transition-colors">
+                  24/7 Emergency Support
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Compliance & Brands */}
+          {/* Equipment Links Exactly as in PDF */}
           <div>
             <h4 className="text-xs uppercase tracking-wider font-bold text-white mb-4">
-              Authorized Brands
+              Equipment
             </h4>
-            <div className="flex flex-wrap gap-1.5">
-              {COMPANY_INFO.brands.map((brand, idx) => (
-                <span 
-                  key={idx}
-                  className="bg-white/5 border border-white/10 px-2 py-1 rounded text-[11px] text-gray-300 font-medium"
-                >
-                  {brand}
-                </span>
-              ))}
-            </div>
-            <div className="mt-4 pt-4 border-t border-white/10">
-              <span className="text-[11px] text-gray-400 block mb-1">Regulatory Standards:</span>
-              <span className="text-xs font-semibold text-gray-200">SOLAS • IMO • NIMASA</span>
-            </div>
+            <ul className="space-y-2.5 text-sm text-gray-300">
+              <li>
+                <Link to="/gmdss-safety-equipment/" className="hover:text-white transition-colors">
+                  GMDSS &amp; Safety
+                </Link>
+              </li>
+              <li>
+                <Link to="/navigational-equipment/" className="hover:text-white transition-colors">
+                  Navigational Equipment
+                </Link>
+              </li>
+              <li>
+                <Link to="/communication-systems/" className="hover:text-white transition-colors">
+                  Communication Systems
+                </Link>
+              </li>
+              <li>
+                <Link to="/equipment" className="hover:text-white transition-colors">
+                  Marine Equipment Overview
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Bottom Tier - Accreditations & Copyright */}
+        {/* Bottom Tier */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="font-semibold text-gray-300">Statutory Recognition:</span>
-            {COMPANY_INFO.classSocieties.map((soc, idx) => (
-              <span key={idx} className="bg-white/10 px-2 py-0.5 rounded text-[11px] text-white">
-                {soc}
-              </span>
-            ))}
+            <span className="font-semibold text-gray-300">Accredited By:</span>
+            <span className="bg-white/10 text-white px-2 py-0.5 rounded font-semibold text-[11px]">DNV GL</span>
+            <span className="bg-white/10 text-white px-2 py-0.5 rounded font-semibold text-[11px]">American Bureau of Shipping</span>
+            <span className="bg-white/10 text-white px-2 py-0.5 rounded font-semibold text-[11px]">Bureau Veritas</span>
+            <span className="bg-white/10 text-white px-2 py-0.5 rounded font-semibold text-[11px]">Lloyd's Register</span>
+            <span className="bg-[#E9231B]/30 text-white px-2 py-0.5 rounded font-bold text-[11px]">NIMASA Approved</span>
           </div>
 
           <p className="text-center md:text-right">
-            &copy; {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved. Registered Marine Electronics Engineering Company, Port Harcourt, Nigeria.
+            &copy; {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved. Registered Marine Engineering Firm, Port Harcourt, Nigeria.
           </p>
         </div>
       </div>

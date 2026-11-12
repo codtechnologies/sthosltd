@@ -326,3 +326,4 @@ export const WHY_CHOOSE_US = [
     icon: "Clock"
   }
 ];
+

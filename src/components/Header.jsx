@@ -8,10 +8,7 @@ import {
   Menu, 
   X, 
   ChevronDown, 
-  ShieldAlert, 
-  ArrowRight,
-  Radio,
-  Anchor
+  ArrowRight
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/marineData';
 
@@ -21,7 +18,7 @@ export default function Header() {
   const [equipmentDropdown, setEquipmentDropdown] = useState(false);
   const location = useLocation();
 
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path) => location.pathname === path || location.pathname.startsWith(path + '/');
 
   return (
     <header className="sticky top-0 z-50 w-full shadow-md">
@@ -103,7 +100,7 @@ export default function Header() {
             <Link 
               to="/" 
               className={`transition-colors py-2 ${
-                isActive('/') ? 'text-[#E9231B] border-b-2 border-[#E9231B]' : 'text-[#071A35] hover:text-[#E9231B]'
+                location.pathname === '/' ? 'text-[#E9231B] border-b-2 border-[#E9231B]' : 'text-[#071A35] hover:text-[#E9231B]'
               }`}
             >
               Home
@@ -112,7 +109,7 @@ export default function Header() {
             <Link 
               to="/about" 
               className={`transition-colors py-2 ${
-                isActive('/about') ? 'text-[#E9231B] border-b-2 border-[#E9231B]' : 'text-[#071A35] hover:text-[#E9231B]'
+                location.pathname === '/about' ? 'text-[#E9231B] border-b-2 border-[#E9231B]' : 'text-[#071A35] hover:text-[#E9231B]'
               }`}
             >
               About Us
@@ -127,7 +124,9 @@ export default function Header() {
               <Link 
                 to="/services" 
                 className={`flex items-center space-x-1 py-2 ${
-                  location.pathname.startsWith('/services') ? 'text-[#E9231B] border-b-2 border-[#E9231B]' : 'text-[#071A35] hover:text-[#E9231B]'
+                  location.pathname === '/services' || location.pathname.includes('certification') || location.pathname.includes('installation') || location.pathname.includes('maintenance') || location.pathname.includes('training') || location.pathname.includes('emergency')
+                    ? 'text-[#E9231B] border-b-2 border-[#E9231B]' 
+                    : 'text-[#071A35] hover:text-[#E9231B]'
                 }`}
               >
                 <span>Services</span>
@@ -140,25 +139,22 @@ export default function Header() {
                     to="/services" 
                     className="block px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#E9231B] border-b border-gray-100 mb-1"
                   >
-                    View All Services &rarr;
+                    Services Overview &rarr;
                   </Link>
-                  <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#071A35]">
-                    Marine Radio Communication
+                  <Link to="/class-certification/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                    Class Certification
                   </Link>
-                  <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#071A35]">
-                    Marine Navigation Systems
+                  <Link to="/installation-integration/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                    Installation &amp; Integration
                   </Link>
-                  <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#071A35]">
-                    Installation & Integration
+                  <Link to="/maintenance-repair/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                    Maintenance &amp; Repair
                   </Link>
-                  <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#071A35]">
-                    Repairs & Troubleshooting
+                  <Link to="/training-programs/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                    Training Programs
                   </Link>
-                  <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#071A35]">
-                    Radio Surveys & Inspection
-                  </Link>
-                  <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#071A35]">
-                    Maintenance & Servicing
+                  <Link to="/emergency-support/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                    Emergency Support
                   </Link>
                 </div>
               )}
@@ -173,7 +169,9 @@ export default function Header() {
               <Link 
                 to="/equipment" 
                 className={`flex items-center space-x-1 py-2 ${
-                  location.pathname.startsWith('/equipment') ? 'text-[#E9231B] border-b-2 border-[#E9231B]' : 'text-[#071A35] hover:text-[#E9231B]'
+                  location.pathname === '/equipment' || location.pathname.includes('gmdss-safety') || location.pathname.includes('navigational') || location.pathname.includes('communication-systems')
+                    ? 'text-[#E9231B] border-b-2 border-[#E9231B]' 
+                    : 'text-[#071A35] hover:text-[#E9231B]'
                 }`}
               >
                 <span>Equipment</span>
@@ -186,22 +184,16 @@ export default function Header() {
                     to="/equipment" 
                     className="block px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#E9231B] border-b border-gray-100 mb-1"
                   >
-                    View Equipment Catalogue &rarr;
+                    Marine Equipment Overview &rarr;
                   </Link>
-                  <Link to="/equipment" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#071A35]">
-                    Marine Radar Systems
+                  <Link to="/gmdss-safety-equipment/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                    GMDSS &amp; Safety Equipment
                   </Link>
-                  <Link to="/equipment" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#071A35]">
-                    GMDSS & VHF/HF Radios
+                  <Link to="/navigational-equipment/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                    Navigational Equipment
                   </Link>
-                  <Link to="/equipment" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#071A35]">
-                    ECDIS & GPS Navigators
-                  </Link>
-                  <Link to="/equipment" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#071A35]">
-                    Satellite Communication (VSAT / Certus)
-                  </Link>
-                  <Link to="/equipment" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#071A35]">
-                    EPIRB, SART & AIS Safety
+                  <Link to="/communication-systems/" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
+                    Communication Systems
                   </Link>
                 </div>
               )}
@@ -210,7 +202,7 @@ export default function Header() {
             <Link 
               to="/contact" 
               className={`transition-colors py-2 ${
-                isActive('/contact') ? 'text-[#E9231B] border-b-2 border-[#E9231B]' : 'text-[#071A35] hover:text-[#E9231B]'
+                location.pathname === '/contact' ? 'text-[#E9231B] border-b-2 border-[#E9231B]' : 'text-[#071A35] hover:text-[#E9231B]'
               }`}
             >
               Contact Us
@@ -249,7 +241,7 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-gray-200 px-6 py-6 space-y-4 shadow-xl">
+        <div className="lg:hidden bg-white border-b border-gray-200 px-6 py-6 space-y-4 shadow-xl max-h-[85vh] overflow-y-auto">
           <Link 
             to="/" 
             onClick={() => setMobileMenuOpen(false)}
@@ -264,20 +256,55 @@ export default function Header() {
           >
             About Us
           </Link>
-          <Link 
-            to="/services" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="block text-base font-bold text-[#071A35] hover:text-[#E9231B] py-2 border-b border-gray-100"
-          >
-            Our Services
-          </Link>
-          <Link 
-            to="/equipment" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="block text-base font-bold text-[#071A35] hover:text-[#E9231B] py-2 border-b border-gray-100"
-          >
-            Marine Equipment
-          </Link>
+          
+          <div className="py-2 border-b border-gray-100 space-y-2">
+            <Link 
+              to="/services" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block text-base font-bold text-[#071A35] hover:text-[#E9231B]"
+            >
+              Services Overview
+            </Link>
+            <div className="pl-4 space-y-2 text-sm text-gray-700">
+              <Link to="/class-certification/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+                • Class Certification
+              </Link>
+              <Link to="/installation-integration/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+                • Installation &amp; Integration
+              </Link>
+              <Link to="/maintenance-repair/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+                • Maintenance &amp; Repair
+              </Link>
+              <Link to="/training-programs/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+                • Training Programs
+              </Link>
+              <Link to="/emergency-support/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+                • Emergency Support
+              </Link>
+            </div>
+          </div>
+
+          <div className="py-2 border-b border-gray-100 space-y-2">
+            <Link 
+              to="/equipment" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block text-base font-bold text-[#071A35] hover:text-[#E9231B]"
+            >
+              Equipment Overview
+            </Link>
+            <div className="pl-4 space-y-2 text-sm text-gray-700">
+              <Link to="/gmdss-safety-equipment/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+                • GMDSS &amp; Safety Equipment
+              </Link>
+              <Link to="/navigational-equipment/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+                • Navigational Equipment
+              </Link>
+              <Link to="/communication-systems/" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
+                • Communication Systems
+              </Link>
+            </div>
+          </div>
+
           <Link 
             to="/contact" 
             onClick={() => setMobileMenuOpen(false)}
