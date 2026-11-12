@@ -78,7 +78,7 @@ export default function Home() {
     <div className="w-full flex flex-col">
 
       {/* ── SLIDESHOW (before Hero) ───────────────────────────── */}
-      <div className="relative w-full h-[40vh] sm:h-[55vh] lg:h-[80vh] min-h-[220px] overflow-hidden bg-[#071A35]">
+      <div className="relative w-full h-[40vh] sm:h-[60vh] lg:h-[80vh] min-h-[220px] overflow-hidden bg-[#071A35]">
         {slides.map((slide, idx) => (
           <div
             key={idx}
