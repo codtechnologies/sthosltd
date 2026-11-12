@@ -19,7 +19,7 @@ export const COMPANY_INFO = {
     offshorePlatform: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80",
     radarScreen: "https://images.unsplash.com/photo-1516116211227-bbc0372df3e2?auto=format&fit=crop&w=1200&q=80",
     marineEngineer: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80",
-    whoWeAre: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=1200&q=80",
+    whoWeAre: "https://bvs-electronics.com/fileadmin/user_upload/Automatisierung_und_Schiffssteuerung.jpg",
     cargoShip: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1200&q=80",
     workboat: "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=1200&q=80"
   }

@@ -48,11 +48,11 @@ export default function Home() {
   // ── Slideshow state ──────────────────────────────────────────
   const slides = [
     {
-      url: "https://media.istockphoto.com/id/2078371110/photo/modern-ship-control-panel-with-steering-wheel-and-engine-accelerators.jpg?s=612x612&w=0&k=20&c=w_AzelyP2BRLTJ9_qtslYX3SelrXNnxu_XzgSLPYtqI=",
+      url: "https://ifa-forwarding.net/blog/wp-content/uploads/2021/12/pexels-photo-6595774.jpeg",
       caption: "Modern Ship Bridge & Navigation Systems"
     },
     {
-      url: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1920&q=80",
+      url: "https://cdn.shopify.com/s/files/1/0090/5072/files/Container_Ships.jpg?v=1769605372",
       caption: "Commercial Vessel Operations at Sea"
     },
     {
@@ -60,7 +60,7 @@ export default function Home() {
       caption: "Ship Wheelhouse — Navigating with Precision"
     },
     {
-      url: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1920&q=80",
+      url: "https://marinespares.com/wp-content/uploads/2023/06/commercial-vessels.jpg",
       caption: "Certified Marine Electronics Technicians"
     },
   ];
