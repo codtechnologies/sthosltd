@@ -9,7 +9,7 @@ export const COMPANY_INFO = {
   primaryEmail: "service@sthosltd.com",
   technicalEmail: "service@sthosltd.com",
   trainingEmail: "service@sthosltd.com",
-  businessHours: "Monday – Friday: 8:00 AM – 5:00 PM WAT",
+  businessHours: "Monday – Friday: 10:00 AM – 5:00 PM WAT",
   emergencyAvailability: "24/7/365 On-Call Dispatch across Gulf of Guinea",
   classSocieties: ["DNV", "ABS"],
   brands: ["Furuno", "Sailor", "Icom"],

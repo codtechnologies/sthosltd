@@ -16,7 +16,7 @@ export default function Footer() {
     <footer className="bg-[#071A35] text-white pt-16 pb-12 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Contact Strips Top Tier */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-12 border-b border-white/10">
           <div className="p-5 rounded-xl bg-white/5 border border-white/5 flex items-start space-x-4">
             <div className="w-10 h-10 rounded-lg bg-[#E9231B] flex items-center justify-center shrink-0">
               <Mail className="w-5 h-5 text-white" />
@@ -31,7 +31,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="p-5 rounded-xl bg-white/5 border border-white/5 flex items-start space-x-4">
+          {/* <div className="p-5 rounded-xl bg-white/5 border border-white/5 flex items-start space-x-4">
             <div className="w-10 h-10 rounded-lg bg-[#E9231B] flex items-center justify-center shrink-0">
               <Phone className="w-5 h-5 text-white" />
             </div>
@@ -43,7 +43,7 @@ export default function Footer() {
                 {COMPANY_INFO.emergencyHotline}
               </a>
             </div>
-          </div>
+          </div> */}
 
           <div className="p-5 rounded-xl bg-white/5 border border-white/5 flex items-start space-x-4">
             <div className="w-10 h-10 rounded-lg bg-[#123B67] flex items-center justify-center shrink-0">
@@ -196,9 +196,6 @@ export default function Footer() {
             <span className="font-semibold text-gray-300">Accredited By:</span>
             <span className="bg-white/10 text-white px-2 py-0.5 rounded font-semibold text-[11px]">DNV GL</span>
             <span className="bg-white/10 text-white px-2 py-0.5 rounded font-semibold text-[11px]">American Bureau of Shipping</span>
-            <span className="bg-white/10 text-white px-2 py-0.5 rounded font-semibold text-[11px]">Bureau Veritas</span>
-            <span className="bg-white/10 text-white px-2 py-0.5 rounded font-semibold text-[11px]">Lloyd's Register</span>
-            <span className="bg-[#E9231B]/30 text-white px-2 py-0.5 rounded font-bold text-[11px]">NIMASA Approved</span>
           </div>
 
           <p className="text-center md:text-right">

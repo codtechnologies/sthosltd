@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Radio, 
@@ -45,8 +45,96 @@ export default function Home() {
   const homeServices = SERVICES_DATA.slice(0, 6);
   const featuredEquipment = EQUIPMENT_DATA.slice(0, 6);
 
+  // ── Slideshow state ──────────────────────────────────────────
+  const slides = [
+    {
+      url: "https://media.istockphoto.com/id/2078371110/photo/modern-ship-control-panel-with-steering-wheel-and-engine-accelerators.jpg?s=612x612&w=0&k=20&c=w_AzelyP2BRLTJ9_qtslYX3SelrXNnxu_XzgSLPYtqI=",
+      caption: "Modern Ship Bridge & Navigation Systems"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1920&q=80",
+      caption: "Commercial Vessel Operations at Sea"
+    },
+    {
+      url: "https://www.scorpiogroup.net/wp-content/uploads/2024/08/Abhishek-Prasad_STI-Solidarity-20240803_181916-WEB-scaled-e1724340315499-1568x1014.jpg",
+      caption: "Ship Wheelhouse — Navigating with Precision"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1920&q=80",
+      caption: "Certified Marine Electronics Technicians"
+    },
+  ];
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
+  // ─────────────────────────────────────────────────────────────
+
   return (
     <div className="w-full flex flex-col">
+
+      {/* ── SLIDESHOW (before Hero) ───────────────────────────── */}
+      <div className="relative w-full h-[75vh] min-h-[320px] overflow-hidden bg-[#071A35]">
+        {slides.map((slide, idx) => (
+          <div
+            key={idx}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              idx === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <img
+              src={slide.url}
+              alt={slide.caption}
+              className="w-full h-full object-cover"
+            />
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-[#071A35]/55" />
+            {/* Caption */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center px-4">
+              <span className="text-white text-sm sm:text-base font-semibold tracking-wide drop-shadow-lg">
+                {slide.caption}
+              </span>
+            </div>
+          </div>
+        ))}
+
+        {/* Dot indicators */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center space-x-2 z-10">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentSlide(idx)}
+              className={`transition-all duration-300 rounded-full ${
+                idx === currentSlide
+                  ? 'w-6 h-2 bg-[#E9231B]'
+                  : 'w-2 h-2 bg-white/50 hover:bg-white/80'
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Prev / Next arrows */}
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-black/40 hover:bg-[#E9231B] text-white flex items-center justify-center transition-colors"
+          aria-label="Previous slide"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-black/40 hover:bg-[#E9231B] text-white flex items-center justify-center transition-colors"
+          aria-label="Next slide"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      {/* ── END SLIDESHOW ─────────────────────────────────────── */}
       {/* SECTION 1: HERO BANNER */}
       <section className="relative min-h-[620px] lg:min-h-[700px] flex items-center bg-[#071A35] text-white overflow-hidden">
         {/* Background Image with Dark Navy Gradient Overlay */}
@@ -68,7 +156,6 @@ export default function Home() {
               {/* Main Heading */}
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-white">
                 Reliable Marine Communication. <br className="hidden sm:inline" />
-                Reliable Marine Communication. <br className="hidden sm:inline" />
                 Advanced Navigation. <br className="hidden sm:inline" />
                 <span className="text-[#E9231B]">Trusted Technical Support.</span>
               </h1>
@@ -81,7 +168,7 @@ export default function Home() {
               {/* Hero CTA Buttons */}
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link
-                  to="/services"
+                  to="/"
                   className="inline-flex items-center space-x-2 bg-[#E9231B] hover:bg-[#C21A13] text-white px-7 py-3.5 rounded-lg text-xs uppercase tracking-wider font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0"
                 >
                   <span>Explore Our Services</span>
@@ -116,12 +203,12 @@ export default function Home() {
                   </div>
                   <div className="p-3 rounded-lg bg-white/5 flex items-center justify-between">
                     <span className="text-gray-300">Class Radio Surveys</span>
-                    <span className="font-bold text-white">DNV · ABS · BV · LR</span>
+                    <span className="font-bold text-white">DNV · ABS</span>
                   </div>
-                  <div className="p-3 rounded-lg bg-white/5 flex items-center justify-between">
+                  {/* <div className="p-3 rounded-lg bg-white/5 flex items-center justify-between">
                     <span className="text-gray-300">Rapid Dispatch Latency</span>
                     <span className="font-bold text-[#E9231B]">&lt; 2.4 Hours</span>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="pt-2 flex items-center space-x-2 text-xs text-gray-300">
@@ -207,7 +294,7 @@ export default function Home() {
 
               <div className="pt-2">
                 <Link
-                  to="/about"
+                  to="/"
                   className="inline-flex items-center space-x-2 bg-[#071A35] hover:bg-[#123B67] text-white px-6 py-3 rounded-lg text-xs uppercase tracking-wider font-bold transition-all shadow-md"
                 >
                   <span>Learn More About Us</span>

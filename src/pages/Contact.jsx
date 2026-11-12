@@ -59,7 +59,7 @@ export default function Contact() {
     const text = encodeURIComponent(
       `Hello STHOS Limited, I am inquiring regarding marine electronics support for my vessel. Service: ${formData.serviceRequired}`
     );
-    window.open(`https://wa.me/2348099999999?text=${text}`, '_blank');
+    window.open(`https://wa.me/2348051324788?text=${text}`, '_blank');
   };
 
   return (
@@ -89,7 +89,7 @@ export default function Contact() {
       </section>
 
       {/* Emergency Alert Strip */}
-      <div className="bg-[#E9231B] text-white py-3 px-4 sm:px-6 text-xs">
+      {/* <div className="bg-[#E9231B] text-white py-3 px-4 sm:px-6 text-xs">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
           <div className="flex items-center space-x-2">
             <span className="flex h-2 w-2 relative">
@@ -105,7 +105,7 @@ export default function Contact() {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Content Grid */}
       <section className="py-20 bg-[#F4F6F8]">
@@ -344,16 +344,6 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start space-x-3 pt-2 border-t border-gray-100">
-                    <Phone className="w-4 h-4 text-[#E9231B] shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="text-[#071A35] block text-sm">Technical &amp; Class Surveys</strong>
-                      <a href={`tel:${COMPANY_INFO.technicalPhone}`} className="text-gray-600 hover:text-[#E9231B]">
-                        {COMPANY_INFO.technicalPhone}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3 pt-2 border-t border-gray-100">
                     <Mail className="w-4 h-4 text-[#E9231B] shrink-0 mt-0.5" />
                     <div>
                       <strong className="text-[#071A35] block text-sm">Official Email</strong>
@@ -375,11 +365,10 @@ export default function Contact() {
               </div>
 
               {/* Location Map Placeholder Card */}
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+              {/* <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
                 <div className="p-5 border-b border-gray-100 flex items-center justify-between">
                   <div>
                     <span className="text-[10px] uppercase font-bold text-[#E9231B] tracking-wider block">Workshop &amp; Spares Depot</span>
-                    <h4 className="text-sm font-bold text-[#071A35]">Port Harcourt Facility</h4>
                   </div>
                   <span className="text-xs bg-[#F4F6F8] px-2 py-1 rounded font-bold text-[#071A35]">Rivers State</span>
                 </div>
@@ -392,7 +381,7 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
