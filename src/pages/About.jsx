@@ -69,7 +69,7 @@ export default function About() {
               <h2 className="text-2xl sm:text-4xl font-extrabold text-[#071A35] tracking-tight leading-tight">
                 Specialized Marine Electronics for Demanding Sea Operations
               </h2>
-              {/* <div className="space-y-4 text-base text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-base text-gray-600 leading-relaxed">
                 <p>
                   <strong>STHOS Limited</strong> is a leading marine radio communication and marine navigational equipment company based in Port Harcourt, Rivers State, Nigeria. We provide professional sales, installation, maintenance, inspection, testing, repair, and technical support for a wide range of marine communication and navigation systems serving the maritime industry across Nigeria and the Gulf of Guinea.
                 </p>
@@ -79,9 +79,9 @@ export default function About() {
                 <p>
                   Our certified Radio Surveyors and field electronics technicians diagnose, service, calibrate, and overhaul equipment from global OEM manufacturers, ensuring maximum uptime and full classification compliance during Port State Control audits.
                 </p>
-              </div> */}
+              </div>
 
-              {/* <div className="pt-2 flex flex-wrap gap-4">
+              <div className="pt-2 flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 text-xs font-bold text-[#071A35] bg-[#F4F6F8] px-3.5 py-2 rounded-lg border border-gray-200">
                   <CheckCircle className="w-4 h-4 text-[#E9231B]" />
                   <span>SOLAS &amp; IMO Standards</span>
@@ -94,10 +94,10 @@ export default function About() {
                   <CheckCircle className="w-4 h-4 text-[#E9231B]" />
                   <span>Rapid 24/7 Dispatch</span>
                 </div>
-              </div> */}
+              </div>
             </div>
 
-            {/* <div className="lg:col-span-5 relative">
+            <div className="lg:col-span-5 relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#F4F6F8]">
                 <img 
                   src={COMPANY_INFO.heroImages.whoWeAre} 
@@ -110,7 +110,7 @@ export default function About() {
                 <span className="text-xs uppercase tracking-wider text-gray-300 font-bold block mt-1">Emergency Dispatch</span>
                 <span className="text-xs text-gray-400 mt-1 block">Dedicated marine field engineers ready for offshore mobilization.</span>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>

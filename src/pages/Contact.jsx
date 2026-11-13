@@ -114,7 +114,7 @@ export default function Contact() {
       </div> */}
 
       {/* Main Content Grid */}
-      <section className="py-20 bg-[#F4F6F8]">
+      <section className="py-10 bg-[#F4F6F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* LEFT COLUMN */}
