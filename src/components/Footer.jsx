@@ -133,27 +133,37 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm text-gray-300">
               <li>
-                <Link to="/class-certification/" className="hover:text-white transition-colors">
+                <Link to="/"
+                // to="/class-certification/"
+                 className="hover:text-white transition-colors">
                   Class Certification
                 </Link>
               </li>
               <li>
-                <Link to="/installation-integration/" className="hover:text-white transition-colors">
+                <Link to="/"
+                //  to="/installation-integration/"
+                  className="hover:text-white transition-colors">
                   Installation &amp; Integration
                 </Link>
               </li>
               <li>
-                <Link to="/maintenance-repair/" className="hover:text-white transition-colors">
+                <Link to="/"
+                //  to="/maintenance-repair/"
+                  className="hover:text-white transition-colors">
                   Maintenance &amp; Repair
                 </Link>
               </li>
               <li>
-                <Link to="/training-programs/" className="hover:text-white transition-colors">
+                <Link to="/" 
+                // to="/training-programs/"
+                 className="hover:text-white transition-colors">
                   Training Programs
                 </Link>
               </li>
               <li>
-                <Link to="/emergency-support/" className="hover:text-white transition-colors">
+                <Link to="/"
+                //  to="/emergency-support/"
+                  className="hover:text-white transition-colors">
                   24/7 Emergency Support
                 </Link>
               </li>
@@ -167,22 +177,30 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm text-gray-300">
               <li>
-                <Link to="/gmdss-safety-equipment/" className="hover:text-white transition-colors">
+                <Link to="/"
+                //  to="/gmdss-safety-equipment/"
+                  className="hover:text-white transition-colors">
                   GMDSS &amp; Safety
                 </Link>
               </li>
               <li>
-                <Link to="/navigational-equipment/" className="hover:text-white transition-colors">
+                <Link to="/"
+                //  to="/navigational-equipment/"
+                  className="hover:text-white transition-colors">
                   Navigational Equipment
                 </Link>
               </li>
               <li>
-                <Link to="/communication-systems/" className="hover:text-white transition-colors">
+                <Link to="/"
+                // to="/communication-systems/"
+                 className="hover:text-white transition-colors">
                   Communication Systems
                 </Link>
               </li>
               <li>
-                <Link to="/equipment" className="hover:text-white transition-colors">
+                <Link to="/"
+                // to="/equipment"
+                 className="hover:text-white transition-colors">
                   Marine Equipment Overview
                 </Link>
               </li>
