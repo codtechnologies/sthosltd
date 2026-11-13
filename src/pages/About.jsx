@@ -69,7 +69,7 @@ export default function About() {
               <h2 className="text-2xl sm:text-4xl font-extrabold text-[#071A35] tracking-tight leading-tight">
                 Specialized Marine Electronics for Demanding Sea Operations
               </h2>
-              <div className="space-y-4 text-base text-gray-600 leading-relaxed">
+              {/* <div className="space-y-4 text-base text-gray-600 leading-relaxed">
                 <p>
                   <strong>STHOS Limited</strong> is a leading marine radio communication and marine navigational equipment company based in Port Harcourt, Rivers State, Nigeria. We provide professional sales, installation, maintenance, inspection, testing, repair, and technical support for a wide range of marine communication and navigation systems serving the maritime industry across Nigeria and the Gulf of Guinea.
                 </p>
@@ -79,9 +79,9 @@ export default function About() {
                 <p>
                   Our certified Radio Surveyors and field electronics technicians diagnose, service, calibrate, and overhaul equipment from global OEM manufacturers, ensuring maximum uptime and full classification compliance during Port State Control audits.
                 </p>
-              </div>
+              </div> */}
 
-              <div className="pt-2 flex flex-wrap gap-4">
+              {/* <div className="pt-2 flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 text-xs font-bold text-[#071A35] bg-[#F4F6F8] px-3.5 py-2 rounded-lg border border-gray-200">
                   <CheckCircle className="w-4 h-4 text-[#E9231B]" />
                   <span>SOLAS &amp; IMO Standards</span>
@@ -94,10 +94,10 @@ export default function About() {
                   <CheckCircle className="w-4 h-4 text-[#E9231B]" />
                   <span>Rapid 24/7 Dispatch</span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
-            <div className="lg:col-span-5 relative">
+            {/* <div className="lg:col-span-5 relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#F4F6F8]">
                 <img 
                   src={COMPANY_INFO.heroImages.whoWeAre} 
@@ -110,7 +110,7 @@ export default function About() {
                 <span className="text-xs uppercase tracking-wider text-gray-300 font-bold block mt-1">Emergency Dispatch</span>
                 <span className="text-xs text-gray-400 mt-1 block">Dedicated marine field engineers ready for offshore mobilization.</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -118,9 +118,9 @@ export default function About() {
       {/* SECTION: MISSION, VISION & CORE VALUES */}
       <section className="py-20 bg-[#F4F6F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12"> */}
             {/* Mission */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200/80 flex flex-col justify-between">
+            {/* <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200/80 flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-xl bg-[#E9231B]/10 text-[#E9231B] flex items-center justify-center mb-6">
                   <Target className="w-6 h-6" />
@@ -135,10 +135,10 @@ export default function About() {
               <span className="text-xs font-bold text-[#E9231B] uppercase tracking-wider mt-6 block">
                 Safety • Reliability • Precision
               </span>
-            </div>
+            </div> */}
 
             {/* Vision */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200/80 flex flex-col justify-between">
+            {/* <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200/80 flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-xl bg-[#071A35]/10 text-[#071A35] flex items-center justify-center mb-6">
                   <Eye className="w-6 h-6" />
@@ -154,10 +154,10 @@ export default function About() {
                 West &amp; Central Africa Leadership
               </span>
             </div>
-          </div>
+          </div> */}
 
           {/* Our Commitment Banner */}
-          <div className="bg-[#071A35] text-white p-8 sm:p-12 rounded-2xl shadow-xl border border-white/10">
+          {/* <div className="bg-[#071A35] text-white p-8 sm:p-12 rounded-2xl shadow-xl border border-white/10">
             <div className="max-w-3xl space-y-4">
               <span className="text-xs font-bold uppercase tracking-widest text-[#E9231B]">
                 Uncompromising Quality
@@ -172,12 +172,12 @@ export default function About() {
                 At STHOS Limited, we are more than a marine electronics company — we are your trusted technical partner for dependable marine communication and navigation solutions across Nigeria and the Gulf of Guinea.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* SECTION: OUR EXPERTISE & TECHNICAL SCOPE */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-[#E9231B]">
@@ -230,7 +230,7 @@ export default function About() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

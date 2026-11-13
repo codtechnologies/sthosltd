@@ -294,7 +294,7 @@ export default function Home() {
 
               <div className="pt-2">
                 <Link
-                  to="/"
+                  to="/about"
                   className="inline-flex items-center space-x-2 bg-[#071A35] hover:bg-[#123B67] text-white px-6 py-3 rounded-lg text-xs uppercase tracking-wider font-bold transition-all shadow-md"
                 >
                   <span>Learn More About Us</span>

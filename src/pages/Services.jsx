@@ -32,7 +32,7 @@ export default function Services() {
   return (
     <div className="w-full flex flex-col">
       {/* Services Header Banner */}
-      <section className="bg-[#071A35] text-white py-16 relative overflow-hidden">
+      {/* <section className="bg-[#071A35] text-white py-16 relative overflow-hidden">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center opacity-30"
           style={{ backgroundImage: `url(${COMPANY_INFO.heroImages.bridge})` }}
@@ -53,10 +53,10 @@ export default function Services() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Value Added Banner */}
-      <div className="bg-[#123B67] text-white py-4 text-xs border-b border-white/10">
+      {/* <div className="bg-[#123B67] text-white py-4 text-xs border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center sm:text-left">
           <div className="flex items-center justify-center sm:justify-start space-x-2">
             <CheckCircle className="w-4 h-4 text-[#E9231B]" />
@@ -75,7 +75,7 @@ export default function Services() {
             <span className="font-semibold">Crew Handover Familiarisation</span>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* DETAILED SERVICES LIST */}
       <section className="py-20 bg-[#F4F6F8]">
@@ -93,7 +93,7 @@ export default function Services() {
                 <div className={`grid grid-cols-1 lg:grid-cols-12 gap-10 items-center ${isEven ? '' : 'lg:flex-row-reverse'}`}>
                   {/* Content Column (full width) */}
                   <div className={`lg:col-span-12 space-y-5`}> 
-                    <div className="flex items-center space-x-3">
+                    {/* <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 rounded-xl bg-[#E9231B]/10 text-[#E9231B] flex items-center justify-center shrink-0">
                         <IconComponent className="w-6 h-6" />
                       </div>
@@ -113,10 +113,10 @@ export default function Services() {
 
                     <p className="text-sm text-gray-600 leading-relaxed">
                       {service.fullDesc}
-                    </p>
+                    </p> */}
 
                     {/* Features checklist */}
-                    <div className="space-y-2 pt-2 border-t border-gray-100">
+                    {/* <div className="space-y-2 pt-2 border-t border-gray-100">
                       <span className="text-xs font-bold uppercase tracking-wider text-gray-500 block mb-2">
                         Key Capabilities &amp; Scope:
                       </span>
@@ -126,10 +126,10 @@ export default function Services() {
                           <span>{feature}</span>
                         </div>
                       ))}
-                    </div>
+                    </div> */}
 
                     {/* Action buttons */}
-                    <div className="pt-4 flex flex-wrap gap-4">
+                    {/* <div className="pt-4 flex flex-wrap gap-4">
                       <Link 
                         to="/contact" 
                         state={{ service: service.title }}
@@ -146,7 +146,7 @@ export default function Services() {
                         <Phone className="w-4 h-4 text-[#E9231B]" />
                         <span>Call Support Desk</span>
                       </a>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -156,7 +156,7 @@ export default function Services() {
       </section>
 
       {/* Bottom CTA Banner */}
-      <section className="py-16 bg-[#071A35] text-white">
+      {/* <section className="py-16 bg-[#071A35] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <span className="text-xs uppercase font-bold tracking-widest text-[#E9231B]">
             Class Compliance &amp; Surveys
@@ -177,7 +177,7 @@ export default function Services() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

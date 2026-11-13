@@ -107,8 +107,8 @@ export default function Header() {
             </Link>
             
             <Link 
-              to="/" 
-              // to="/about" 
+              // to="/" 
+              to="/about" 
               className={`transition-colors py-2 ${
                 location.pathname === '/about' ? 'text-[#E9231B] border-b-2 border-[#E9231B]' : 'text-[#071A35] hover:text-[#E9231B]'
               }`}

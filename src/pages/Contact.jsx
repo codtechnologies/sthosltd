@@ -154,9 +154,9 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-6"> */}
                     {/* Full Name */}
-                    <div>
+                    {/* <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-[#071A35] mb-2">
                         Full Name <span className="text-[#E9231B]">*</span>
                       </label>
@@ -172,10 +172,10 @@ export default function Contact() {
                       {formErrors.fullName && (
                         <span className="text-[11px] text-[#E9231B] mt-1 block">{formErrors.fullName}</span>
                       )}
-                    </div>
+                    </div> */}
 
                     {/* Company / Vessel Name */}
-                    <div>
+                    {/* <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-[#071A35] mb-2">
                         Company / Vessel Name
                       </label>
@@ -187,11 +187,11 @@ export default function Contact() {
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#071A35]"
                       />
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-6"> */}
                     {/* Email */}
-                    <div>
+                    {/* <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-[#071A35] mb-2">
                         Email Address <span className="text-[#E9231B]">*</span>
                       </label>
@@ -207,10 +207,10 @@ export default function Contact() {
                       {formErrors.email && (
                         <span className="text-[11px] text-[#E9231B] mt-1 block">{formErrors.email}</span>
                       )}
-                    </div>
+                    </div> */}
 
                     {/* Phone */}
-                    <div>
+                    {/* <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-[#071A35] mb-2">
                         Phone Number
                       </label>
@@ -222,10 +222,10 @@ export default function Contact() {
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#071A35]"
                       />
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Service Required */}
-                  <div>
+                  {/* <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-[#071A35] mb-2">
                       Service Required
                     </label>
@@ -245,10 +245,10 @@ export default function Contact() {
                       <option value="Equipment Supply">Marine Equipment Supply</option>
                       <option value="Other">Other Requirement</option>
                     </select>
-                  </div>
+                  </div> */}
 
                   {/* Message */}
-                  <div>
+                  {/* <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-[#071A35] mb-2">
                       Message / Vessel Location &amp; Scope <span className="text-[#E9231B]">*</span>
                     </label>
@@ -264,10 +264,10 @@ export default function Contact() {
                     {formErrors.message && (
                       <span className="text-[11px] text-[#E9231B] mt-1 block">{formErrors.message}</span>
                     )}
-                  </div>
+                  </div> */}
 
                   {/* Submit and WhatsApp Buttons */}
-                  <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
+                  {/* <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
                     <button
                       type="submit"
                       className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-[#E9231B] hover:bg-[#C21A13] text-white px-8 py-3.5 rounded-lg text-xs uppercase tracking-wider font-bold transition-all shadow-md active:scale-95"
@@ -284,7 +284,7 @@ export default function Contact() {
                       <MessageSquare className="w-4 h-4" />
                       <span>WhatsApp Technical Desk</span>
                     </button>
-                  </div>
+                  </div> */}
                 </form>
               )}
             </div>
@@ -292,7 +292,7 @@ export default function Contact() {
             {/* Right Column: Contact Cards & Coordinates (5 cols) */}
             <div className="lg:col-span-5 space-y-8">
               {/* Emergency Dispatch Card */}
-              <div className="bg-[#071A35] text-white p-8 rounded-2xl shadow-xl border border-white/10 space-y-6">
+              {/* <div className="bg-[#071A35] text-white p-8 rounded-2xl shadow-xl border border-white/10 space-y-6">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 rounded-xl bg-[#E9231B] flex items-center justify-center text-white shrink-0">
                     <AlertTriangle className="w-6 h-6" />
@@ -316,10 +316,10 @@ export default function Contact() {
                   </a>
                   <span className="text-[11px] text-gray-400 mt-1 block">Duty Marine Dispatcher On-Call</span>
                 </div>
-              </div>
+              </div> */}
 
               {/* Department Directory Card */}
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 space-y-6">
+              {/* <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 space-y-6">
                 <h3 className="text-lg font-bold text-[#071A35] border-b border-gray-100 pb-3">
                   Headquarters &amp; Direct Directory
                 </h3>
@@ -362,7 +362,7 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Location Map Placeholder Card */}
               {/* <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
