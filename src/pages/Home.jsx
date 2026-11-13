@@ -320,7 +320,7 @@ export default function Home() {
               </h2>
             </div>
             <Link
-              to="/services"
+              to="/"
               className="inline-flex items-center space-x-1.5 text-xs font-bold uppercase tracking-wider text-[#E9231B] hover:text-[#C21A13] transition-colors"
             >
               <span>View All Services</span>
@@ -360,7 +360,7 @@ export default function Home() {
                   {/* CTA */}
                   <div className="pt-4 mt-4 border-t border-gray-100">
                     <Link
-                      to="/services"
+                      to="/"
                       className="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-[#071A35] group-hover:text-[#E9231B] transition-colors"
                     >
                       <span>Learn More</span>

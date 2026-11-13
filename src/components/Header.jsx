@@ -39,12 +39,12 @@ export default function Header() {
                 {COMPANY_INFO.emergencyHotline}
               </a>
             </div>
-            <div className="hidden md:flex items-center space-x-2 text-gray-300">
+            {/* <div className="hidden md:flex items-center space-x-2 text-gray-300">
               <Phone className="w-3.5 h-3.5 text-[#E9231B]" />
               <a href={`tel:${COMPANY_INFO.salesPhone}`} className="hover:text-white transition-colors">
                 {COMPANY_INFO.salesPhone}
               </a>
-            </div>
+            </div> */}
             <div className="hidden lg:flex items-center space-x-2 text-gray-300">
               <Mail className="w-3.5 h-3.5 text-[#E9231B]" />
               <a href={`mailto:${COMPANY_INFO.primaryEmail}`} className="hover:text-white transition-colors">
