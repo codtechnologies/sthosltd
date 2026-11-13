@@ -1,23 +1,25 @@
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  ShieldAlert, 
-  Send, 
-  CheckCircle, 
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  ShieldAlert,
+  Send,
+  CheckCircle,
   MessageSquare,
   AlertTriangle,
   Compass,
-  FileCheck
-} from 'lucide-react';
-import { COMPANY_INFO } from '../data/marineData';
+  FileCheck,
+  ArrowRight,
+} from "lucide-react";
+import { COMPANY_INFO } from "../data/marineData";
 
 export default function Contact() {
   const location = useLocation();
-  const prefillService = location.state?.service || location.state?.equipment || "";
+  const prefillService =
+    location.state?.service || location.state?.equipment || "";
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -25,7 +27,7 @@ export default function Contact() {
     email: "",
     phone: "",
     serviceRequired: prefillService || "Class Certification",
-    message: ""
+    message: "",
   });
 
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -39,7 +41,8 @@ export default function Contact() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       errors.email = "Please enter a valid email address";
     }
-    if (!formData.message.trim()) errors.message = "Message details are required";
+    if (!formData.message.trim())
+      errors.message = "Message details are required";
     return errors;
   };
 
@@ -57,16 +60,16 @@ export default function Contact() {
 
   const handleWhatsApp = () => {
     const text = encodeURIComponent(
-      `Hello STHOS Limited, I am inquiring regarding marine electronics support for my vessel. Service: ${formData.serviceRequired}`
+      `Hello STHOS Limited, I am inquiring regarding marine electronics support for my vessel. Service: ${formData.serviceRequired}`,
     );
-    window.open(`https://wa.me/2348051324788?text=${text}`, '_blank');
+    window.open(`https://wa.me/2348051324788?text=${text}`, "_blank");
   };
 
   return (
     <div className="w-full flex flex-col">
       {/* Header Banner */}
       <section className="bg-[#071A35] text-white py-16 relative overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 z-0 bg-cover bg-center opacity-30"
           style={{ backgroundImage: `url(${COMPANY_INFO.heroImages.bridge})` }}
         />
@@ -79,11 +82,14 @@ export default function Contact() {
               <span>Direct Operational Link</span>
             </div>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-              Contact Us<span className="text-[#E9231B]">.</span>
-            </h1>
-            <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-              Connect with Nigeria’s marine communication, navigation and class certification engineering experts. Rapid quotes, survey scheduling, and 24/7 offshore emergency response.
-            </p>
+  Contact STHOS Limited for Marine Technical Support
+  <span className="text-[#E9231B]">.</span>
+</h1>
+            {/* <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+              Connect with Nigeria’s marine communication, navigation and class
+              certification engineering experts. Rapid quotes, survey
+              scheduling, and 24/7 offshore emergency response.
+            </p> */}
           </div>
         </div>
       </section>
@@ -111,7 +117,157 @@ export default function Contact() {
       <section className="py-20 bg-[#F4F6F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            {/* Left Column: Form (7 cols) */}
+            {/* LEFT COLUMN */}
+            {/* Unified Contact & Emergency Information */}
+            <div className="lg:col-span-5">
+              <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                {/* Emergency Header */}
+                <div className="bg-[#071A35] text-white p-7 sm:p-8 space-y-5">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-[#E9231B] flex items-center justify-center shrink-0">
+                      <AlertTriangle className="w-6 h-6" />
+                    </div>
+
+                    <div>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-[#FF6B63]">
+                        Immediate Vessel Response
+                      </span>
+                      <h3 className="text-xl sm:text-2xl font-bold mt-1">
+                        24/7 Emergency Dispatch
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* <p className="text-sm text-gray-300 leading-relaxed">
+                    Critical navigational blackout, radar failure, or urgent
+                    class survey readiness before departure. Our technical
+                    response team supports vessels around Onne Port, Bonny
+                    Fairway, Escravos, and offshore anchorages.
+                  </p> */}
+
+                  <div className="bg-white/5 border border-white/10 p-5 rounded-xl">
+                    {/* <span className="text-[10px] text-gray-400 uppercase tracking-wider block font-semibold">
+                      Emergency Hotline
+                    </span> */}
+
+                    <a
+                      href={`tel:${COMPANY_INFO.emergencyHotline}`}
+                      className="text-2xl sm:text-3xl font-black text-[#E9231B] hover:text-white transition-colors block mt-2"
+                    >
+                      {COMPANY_INFO.emergencyHotline}
+                    </a>
+
+                    {/* <div className="flex items-center gap-2 mt-2">
+                      <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                      <span className="text-xs text-gray-300">
+                        Emergency Support Available 24/7
+                      </span>
+                    </div> */}
+                  </div>
+                </div>
+
+                {/* Contact Directory */}
+                <div className="p-7 sm:p-8 space-y-3">
+                  <div className="flex items-center justify-between border-b border-gray-100 pb-4">
+                    <div>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-[#E9231B]">
+                        Get In Touch
+                      </span>
+                      <h3 className="text-lg font-bold text-[#071A35] mt-1">
+                        Contact Details
+                      </h3>
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-[#F4F6F8] flex items-center justify-center">
+                      <Phone className="w-5 h-5 text-[#071A35]" />
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    {/* Address */}
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
+                        <MapPin className="w-5 h-5 text-[#E9231B]" />
+                      </div>
+                      <div className="min-w-0">
+                        <h4 className="text-sm font-bold text-[#071A35]">
+                          Port Harcourt
+                        </h4>
+                        <p className="text-sm text-gray-600 mt-1 leading-relaxed">
+                          {COMPANY_INFO.addressPlaceholder}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Sales Phone */}
+                    <div className="flex items-start gap-4 pt-4 border-t border-gray-100">
+                      <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
+                        <Phone className="w-5 h-5 text-[#E9231B]" />
+                      </div>
+                      <div className="min-w-0">
+                        <h4 className="text-sm font-bold text-[#071A35]">
+                          General Enquiries
+                        </h4>
+                        <a
+                          href={`tel:${COMPANY_INFO.salesPhone}`}
+                          className="text-sm text-gray-600 mt-1 inline-block hover:text-[#E9231B] transition-colors"
+                        >
+                          {COMPANY_INFO.salesPhone}
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Email */}
+                    <div className="flex items-start gap-4 pt-4 border-t border-gray-100">
+                      <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
+                        <Mail className="w-5 h-5 text-[#E9231B]" />
+                      </div>
+                      <div className="min-w-0">
+                        <h4 className="text-sm font-bold text-[#071A35]">
+                          Official Email
+                        </h4>
+                        <a
+                          href={`mailto:${COMPANY_INFO.primaryEmail}`}
+                          className="text-sm text-gray-600 mt-1 inline-block hover:text-[#E9231B] transition-colors break-all"
+                        >
+                          {COMPANY_INFO.primaryEmail}
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Business Hours */}
+                    <div className="flex items-start gap-4 pt-4 border-t border-gray-100">
+                      <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
+                        <Clock className="w-5 h-5 text-[#E9231B]" />
+                      </div>
+                      <div className="min-w-0">
+                        <h4 className="text-sm font-bold text-[#071A35]">
+                          Operational Hours
+                        </h4>
+                        <p className="text-sm text-gray-600 mt-1">
+                          {COMPANY_INFO.businessHours}
+                        </p>
+                        <span className="text-xs font-bold text-[#E9231B] mt-1 inline-block">
+                          Emergency Support: 24/7/365
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom CTA */}
+                  <div className="pt-5 border-t border-gray-100">
+                    <a
+                      href={`tel:${COMPANY_INFO.salesPhone}`}
+                      className="w-full flex items-center justify-center gap-2 bg-[#071A35] hover:bg-[#123B67] text-white py-3.5 px-5 rounded-xl text-sm font-bold transition-colors"
+                    >
+                      Contact Our Team
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Form (7 cols) */}
             <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-2xl shadow-sm border border-gray-200">
               <div className="border-b border-gray-100 pb-6 mb-8">
                 <span className="text-xs uppercase font-bold tracking-wider text-[#E9231B] block mb-1">
@@ -121,19 +277,25 @@ export default function Contact() {
                   Quick Marine Inquiry Form
                 </h2>
                 <p className="text-xs text-gray-500 mt-1">
-                  Fill in your vessel specifics and our Port Harcourt technical coordinator will contact you promptly.
+                  Fill in your vessel specifics and our Port Harcourt technical
+                  coordinator will contact you promptly.
                 </p>
               </div>
 
               {formSubmitted ? (
                 <div className="bg-emerald-50 border border-emerald-200 p-8 rounded-xl text-center space-y-4">
                   <CheckCircle className="w-14 h-14 text-emerald-600 mx-auto" />
-                  <h3 className="text-xl font-bold text-emerald-900">Inquiry Received Successfully</h3>
+                  <h3 className="text-xl font-bold text-emerald-900">
+                    Inquiry Received Successfully
+                  </h3>
                   <p className="text-sm text-emerald-800 leading-relaxed max-w-md mx-auto">
-                    Thank you, <strong>{formData.fullName}</strong>. A STHOS technical superintendent has been notified regarding your inquiry for <strong>{formData.serviceRequired}</strong>.
+                    Thank you, <strong>{formData.fullName}</strong>. A STHOS
+                    technical superintendent has been notified regarding your
+                    inquiry for <strong>{formData.serviceRequired}</strong>.
                   </p>
                   <p className="text-xs text-emerald-700">
-                    For urgent sea emergencies, please call our 24/7 hotline directly: <strong>{COMPANY_INFO.emergencyHotline}</strong>
+                    For urgent sea emergencies, please call our 24/7 hotline
+                    directly: <strong>{COMPANY_INFO.emergencyHotline}</strong>
                   </p>
                   <button
                     onClick={() => {
@@ -144,7 +306,7 @@ export default function Contact() {
                         email: "",
                         phone: "",
                         serviceRequired: "Class Certification",
-                        message: ""
+                        message: "",
                       });
                     }}
                     className="mt-4 bg-[#071A35] text-white px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider"
@@ -154,9 +316,9 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-6"> */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {/* Full Name */}
-                    {/* <div>
+                    <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-[#071A35] mb-2">
                         Full Name <span className="text-[#E9231B]">*</span>
                       </label>
@@ -164,18 +326,24 @@ export default function Contact() {
                         type="text"
                         placeholder="Capt. E. Alabo"
                         value={formData.fullName}
-                        onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, fullName: e.target.value })
+                        }
                         className={`w-full px-4 py-3 rounded-lg border text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#071A35] ${
-                          formErrors.fullName ? 'border-[#E9231B]' : 'border-gray-200'
+                          formErrors.fullName
+                            ? "border-[#E9231B]"
+                            : "border-gray-200"
                         }`}
                       />
                       {formErrors.fullName && (
-                        <span className="text-[11px] text-[#E9231B] mt-1 block">{formErrors.fullName}</span>
+                        <span className="text-[11px] text-[#E9231B] mt-1 block">
+                          {formErrors.fullName}
+                        </span>
                       )}
-                    </div> */}
+                    </div>
 
                     {/* Company / Vessel Name */}
-                    {/* <div>
+                    <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-[#071A35] mb-2">
                         Company / Vessel Name
                       </label>
@@ -183,15 +351,20 @@ export default function Contact() {
                         type="text"
                         placeholder="MT Bonny Pride / Operator"
                         value={formData.vesselName}
-                        onChange={(e) => setFormData({ ...formData, vesselName: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            vesselName: e.target.value,
+                          })
+                        }
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#071A35]"
                       />
                     </div>
-                  </div> */}
+                  </div>
 
-                  {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-6"> */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {/* Email */}
-                    {/* <div>
+                    <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-[#071A35] mb-2">
                         Email Address <span className="text-[#E9231B]">*</span>
                       </label>
@@ -199,18 +372,24 @@ export default function Contact() {
                         type="email"
                         placeholder="superintendent@fleet.com"
                         value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, email: e.target.value })
+                        }
                         className={`w-full px-4 py-3 rounded-lg border text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#071A35] ${
-                          formErrors.email ? 'border-[#E9231B]' : 'border-gray-200'
+                          formErrors.email
+                            ? "border-[#E9231B]"
+                            : "border-gray-200"
                         }`}
                       />
                       {formErrors.email && (
-                        <span className="text-[11px] text-[#E9231B] mt-1 block">{formErrors.email}</span>
+                        <span className="text-[11px] text-[#E9231B] mt-1 block">
+                          {formErrors.email}
+                        </span>
                       )}
-                    </div> */}
+                    </div>
 
                     {/* Phone */}
-                    {/* <div>
+                    <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-[#071A35] mb-2">
                         Phone Number
                       </label>
@@ -218,56 +397,88 @@ export default function Contact() {
                         type="tel"
                         placeholder="+234 ..."
                         value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, phone: e.target.value })
+                        }
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#071A35]"
                       />
                     </div>
-                  </div> */}
+                  </div>
 
                   {/* Service Required */}
-                  {/* <div>
+                  <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-[#071A35] mb-2">
                       Service Required
                     </label>
                     <select
                       value={formData.serviceRequired}
-                      onChange={(e) => setFormData({ ...formData, serviceRequired: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          serviceRequired: e.target.value,
+                        })
+                      }
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#071A35] bg-white cursor-pointer"
                     >
-                      <option value="Class Certification">Class Certification &amp; Radio Survey</option>
-                      <option value="Marine Radio Communication">Marine Radio Communication (VHF/HF/GMDSS)</option>
-                      <option value="Marine Navigation Systems">Marine Navigation (Radar, ECDIS, Gyro)</option>
-                      <option value="Installation & Integration">Installation &amp; Integration</option>
-                      <option value="Repairs & Troubleshooting">Repairs &amp; Troubleshooting</option>
-                      <option value="Maintenance & Servicing">Maintenance &amp; Servicing</option>
-                      <option value="Crew Training Programs">Crew Training Programs</option>
-                      <option value="Emergency Support">24/7 Emergency Support</option>
-                      <option value="Equipment Supply">Marine Equipment Supply</option>
+                      <option value="Class Certification">
+                        Class Certification &amp; Radio Survey
+                      </option>
+                      <option value="Marine Radio Communication">
+                        Marine Radio Communication (VHF/HF/GMDSS)
+                      </option>
+                      <option value="Marine Navigation Systems">
+                        Marine Navigation (Radar, ECDIS, Gyro)
+                      </option>
+                      <option value="Installation & Integration">
+                        Installation &amp; Integration
+                      </option>
+                      <option value="Repairs & Troubleshooting">
+                        Repairs &amp; Troubleshooting
+                      </option>
+                      <option value="Maintenance & Servicing">
+                        Maintenance &amp; Servicing
+                      </option>
+                      <option value="Crew Training Programs">
+                        Crew Training Programs
+                      </option>
+                      <option value="Emergency Support">
+                        24/7 Emergency Support
+                      </option>
+                      <option value="Equipment Supply">
+                        Marine Equipment Supply
+                      </option>
                       <option value="Other">Other Requirement</option>
                     </select>
-                  </div> */}
+                  </div>
 
                   {/* Message */}
-                  {/* <div>
+                  <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-[#071A35] mb-2">
-                      Message / Vessel Location &amp; Scope <span className="text-[#E9231B]">*</span>
+                      Message / Vessel Location &amp; Scope{" "}
+                      <span className="text-[#E9231B]">*</span>
                     </label>
                     <textarea
                       rows={5}
                       placeholder="Specify vessel berth/anchorage (e.g. Onne Port, Bonny Offshore), equipment model (Furuno, Sailor, JRC) and deadline..."
                       value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
+                      }
                       className={`w-full px-4 py-3 rounded-lg border text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#071A35] ${
-                        formErrors.message ? 'border-[#E9231B]' : 'border-gray-200'
+                        formErrors.message
+                          ? "border-[#E9231B]"
+                          : "border-gray-200"
                       }`}
                     />
                     {formErrors.message && (
-                      <span className="text-[11px] text-[#E9231B] mt-1 block">{formErrors.message}</span>
+                      <span className="text-[11px] text-[#E9231B] mt-1 block">
+                        {formErrors.message}
+                      </span>
                     )}
-                  </div> */}
+                  </div>
 
                   {/* Submit and WhatsApp Buttons */}
-                  {/* <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
+                  <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
                     <button
                       type="submit"
                       className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-[#E9231B] hover:bg-[#C21A13] text-white px-8 py-3.5 rounded-lg text-xs uppercase tracking-wider font-bold transition-all shadow-md active:scale-95"
@@ -284,109 +495,39 @@ export default function Contact() {
                       <MessageSquare className="w-4 h-4" />
                       <span>WhatsApp Technical Desk</span>
                     </button>
-                  </div> */}
+                  </div>
                 </form>
               )}
-            </div>
-
-            {/* Right Column: Contact Cards & Coordinates (5 cols) */}
-            <div className="lg:col-span-5 space-y-8">
-              {/* Emergency Dispatch Card */}
-              {/* <div className="bg-[#071A35] text-white p-8 rounded-2xl shadow-xl border border-white/10 space-y-6">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 rounded-xl bg-[#E9231B] flex items-center justify-center text-white shrink-0">
-                    <AlertTriangle className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#E9231B] bg-[#E9231B]/20 px-2 py-0.5 rounded">
-                      Immediate Vessel Response
-                    </span>
-                    <h3 className="text-xl font-bold text-white mt-1">24/7 Emergency Dispatch</h3>
-                  </div>
-                </div>
-
-                <p className="text-xs text-gray-300 leading-relaxed">
-                  Critical navigational blackout, radar failure, or urgent class survey readiness before departure. Field squads on standby for Onne Port, Bonny Fairway, Escravos, and offshore anchorages.
-                </p>
-
-                <div className="bg-white/5 border border-white/10 p-5 rounded-xl">
-                  <span className="text-[11px] text-gray-400 uppercase tracking-wider block font-medium">Direct Telephone:</span>
-                  <a href={`tel:${COMPANY_INFO.emergencyHotline}`} className="text-2xl font-black text-[#E9231B] hover:underline block mt-1">
-                    {COMPANY_INFO.emergencyHotline}
-                  </a>
-                  <span className="text-[11px] text-gray-400 mt-1 block">Duty Marine Dispatcher On-Call</span>
-                </div>
-              </div> */}
-
-              {/* Department Directory Card */}
-              {/* <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 space-y-6">
-                <h3 className="text-lg font-bold text-[#071A35] border-b border-gray-100 pb-3">
-                  Headquarters &amp; Direct Directory
-                </h3>
-
-                <div className="space-y-4 text-xs">
-                  <div className="flex items-start space-x-3">
-                    <MapPin className="w-4 h-4 text-[#E9231B] shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="text-[#071A35] block text-sm">Port Harcourt Base</strong>
-                      <span className="text-gray-600 block mt-0.5">{COMPANY_INFO.addressPlaceholder}</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3 pt-2 border-t border-gray-100">
-                    <Phone className="w-4 h-4 text-[#E9231B] shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="text-[#071A35] block text-sm">Sales &amp; General Enquiries</strong>
-                      <a href={`tel:${COMPANY_INFO.salesPhone}`} className="text-gray-600 hover:text-[#E9231B]">
-                        {COMPANY_INFO.salesPhone}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3 pt-2 border-t border-gray-100">
-                    <Mail className="w-4 h-4 text-[#E9231B] shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="text-[#071A35] block text-sm">Official Email</strong>
-                      <a href={`mailto:${COMPANY_INFO.primaryEmail}`} className="text-gray-600 hover:text-[#E9231B]">
-                        {COMPANY_INFO.primaryEmail}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3 pt-2 border-t border-gray-100">
-                    <Clock className="w-4 h-4 text-[#E9231B] shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="text-[#071A35] block text-sm">Operational Hours</strong>
-                      <span className="text-gray-600 block">{COMPANY_INFO.businessHours}</span>
-                      <span className="text-[#E9231B] font-bold block mt-0.5">Emergency Support: 24/7/365</span>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-
-              {/* Location Map Placeholder Card */}
-              {/* <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
-                <div className="p-5 border-b border-gray-100 flex items-center justify-between">
-                  <div>
-                    <span className="text-[10px] uppercase font-bold text-[#E9231B] tracking-wider block">Workshop &amp; Spares Depot</span>
-                  </div>
-                  <span className="text-xs bg-[#F4F6F8] px-2 py-1 rounded font-bold text-[#071A35]">Rivers State</span>
-                </div>
-                <div className="h-48 bg-slate-100 flex items-center justify-center relative bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80')` }}>
-                  <div className="absolute inset-0 bg-[#071A35]/50 flex items-center justify-center p-4">
-                    <div className="bg-white/95 p-3 rounded-lg shadow-lg text-center max-w-xs">
-                      <MapPin className="w-5 h-5 text-[#E9231B] mx-auto mb-1" />
-                      <span className="text-xs font-bold text-[#071A35] block">STHOS Limited Shore Base</span>
-                      <span className="text-[11px] text-gray-500">Port Harcourt &amp; Bonny River Fast Launch Access</span>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
       </section>
+
+<section className="py-16 bg-white">
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-3xl mx-auto text-center">
+      <span className="text-xs font-bold uppercase tracking-wider text-[#E9231B]">
+        Marine Technical Services
+      </span>
+
+      <h2 className="text-2xl sm:text-3xl font-extrabold text-[#071A35] mt-3 mb-5">
+        How Can STHOS Limited Support Your Vessel?
+      </h2>
+
+      <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+        STHOS Limited welcomes enquiries from vessel owners,
+        ship operators, marine contractors and offshore service
+        companies seeking marine communication and navigation
+        solutions. Contact our team for enquiries about GMDSS
+        equipment, VHF and MF/HF radio systems, radar,
+        AIS, GPS, marine electronics installation, repairs,
+        maintenance and radio surveys.
+      </p>
     </div>
+  </div>
+</section>
+
+    </div>
+
   );
 }
-

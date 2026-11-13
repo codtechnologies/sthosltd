@@ -228,7 +228,7 @@ to="/"
             </div>
 
             <Link 
-              to="/" 
+              to="/contact" 
               className={`transition-colors py-2 ${
                 location.pathname === '/contact' ? 'text-[#E9231B] border-b-2 border-[#E9231B]' : 'text-[#071A35] hover:text-[#E9231B]'
               }`}
@@ -240,7 +240,7 @@ to="/"
           {/* Action Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link 
-              to="/" 
+              to="/contact" 
               className="inline-flex items-center space-x-2 bg-[#E9231B] hover:bg-[#C21A13] text-white px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-bold transition-all shadow-md hover:shadow-lg active:scale-95"
             >
               <span>Get in Touch</span>
