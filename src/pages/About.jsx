@@ -118,9 +118,9 @@ export default function About() {
       {/* SECTION: MISSION, VISION & CORE VALUES */}
       <section className="py-20 bg-[#F4F6F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12"> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* Mission */}
-            {/* <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200/80 flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200/80 flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-xl bg-[#E9231B]/10 text-[#E9231B] flex items-center justify-center mb-6">
                   <Target className="w-6 h-6" />
@@ -135,10 +135,10 @@ export default function About() {
               <span className="text-xs font-bold text-[#E9231B] uppercase tracking-wider mt-6 block">
                 Safety • Reliability • Precision
               </span>
-            </div> */}
+            </div>
 
             {/* Vision */}
-            {/* <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200/80 flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200/80 flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-xl bg-[#071A35]/10 text-[#071A35] flex items-center justify-center mb-6">
                   <Eye className="w-6 h-6" />
@@ -154,10 +154,10 @@ export default function About() {
                 West &amp; Central Africa Leadership
               </span>
             </div>
-          </div> */}
+          </div>
 
           {/* Our Commitment Banner */}
-          {/* <div className="bg-[#071A35] text-white p-8 sm:p-12 rounded-2xl shadow-xl border border-white/10">
+          <div className="bg-[#071A35] text-white p-8 sm:p-12 rounded-2xl shadow-xl border border-white/10">
             <div className="max-w-3xl space-y-4">
               <span className="text-xs font-bold uppercase tracking-widest text-[#E9231B]">
                 Uncompromising Quality
@@ -172,12 +172,12 @@ export default function About() {
                 At STHOS Limited, we are more than a marine electronics company — we are your trusted technical partner for dependable marine communication and navigation solutions across Nigeria and the Gulf of Guinea.
               </p>
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
 
       {/* SECTION: OUR EXPERTISE & TECHNICAL SCOPE */}
-      {/* <section className="py-20 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-[#E9231B]">
@@ -230,7 +230,7 @@ export default function About() {
             </Link>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
