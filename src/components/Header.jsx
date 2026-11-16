@@ -123,8 +123,8 @@ export default function Header() {
               onMouseLeave={() => setServicesDropdown(false)}
             >
               <Link 
-                // to="/services"
-                to="/"  
+                to="/services"
+                // to="/"  
                 className={`flex items-center space-x-1 py-2 ${
                   location.pathname === '/services' || location.pathname.includes('certification') || location.pathname.includes('installation') || location.pathname.includes('maintenance') || location.pathname.includes('training') || location.pathname.includes('emergency')
                     ? 'text-[#E9231B] border-b-2 border-[#E9231B]' 
