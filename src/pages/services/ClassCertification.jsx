@@ -65,10 +65,10 @@ export default function ClassCertification() {
       </div>
 
       {/* Content Body */}
-      {/* <section className="py-20 bg-white"> */}
-        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16"> */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           {/* Overview & Services Grid */}
-          {/* <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-6 space-y-6">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#071A35]">
                 Overview
@@ -107,8 +107,8 @@ export default function ClassCertification() {
             </div>
 
             <div className="lg:col-span-6 space-y-8">
-              {/* Approach: 5-Step Process */}
-              {/* <div className="bg-[#F4F6F8] p-8 rounded-2xl border border-gray-200">
+              Approach: 5-Step Process
+              <div className="bg-[#F4F6F8] p-8 rounded-2xl border border-gray-200">
                 <h3 className="text-xl font-bold text-[#071A35] mb-6 flex items-center space-x-2">
                   <FileText className="w-5 h-5 text-[#E9231B]" />
                   <span>Our Approach (5-Step Process)</span>
@@ -153,12 +153,12 @@ export default function ClassCertification() {
                     </div>
                   </li>
                 </ol>
-              </div> */}
-            {/* </div> */}
-          {/* </div> */}
+              </div>
+            </div>
+          </div>
 
           {/* Why Choose STHOS Ltd? & Key Benefits */}
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-gray-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-gray-200">
             <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm space-y-4">
               <h3 className="text-xl font-bold text-[#071A35]">
                 Why Choose STHOS Ltd?
@@ -206,10 +206,10 @@ export default function ClassCertification() {
                 </p>
               </div>
             </div>
-          </div> */}
+          </div>
 
           {/* Action Box */}
-          {/* <div className="bg-[#071A35] text-white p-8 sm:p-12 rounded-2xl shadow-xl space-y-6">
+          <div className="bg-[#071A35] text-white p-8 sm:p-12 rounded-2xl shadow-xl space-y-6">
             <div className="max-w-2xl space-y-2">
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
                 Ready to Secure Your Class Certification?
@@ -242,9 +242,9 @@ export default function ClassCertification() {
                 <span>Speak to Our Class Team: {COMPANY_INFO.technicalPhone}</span>
               </a>
             </div>
-          </div> */}
-        {/* </div> */}
-      {/* </section> */}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

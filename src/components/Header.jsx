@@ -138,15 +138,15 @@ export default function Header() {
               {servicesDropdown && (
                 <div className="absolute top-full left-0 w-72 bg-white rounded-lg shadow-xl border border-gray-100 py-3 z-50">
                   <Link 
-                    // to="/services"
-                    to="/" 
+                    to="/services"
+                    // to="/" 
                     className="block px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#E9231B] border-b border-gray-100 mb-1"
                   >
                     Services Overview &rarr;
                   </Link>
                   <Link 
-                  // to="/class-certification/"
-                  to="/"
+                  to="/class-certification/"
+                  // to="/"
                    className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     Class Certification
                   </Link>
@@ -185,7 +185,7 @@ to="/"
               onMouseLeave={() => setEquipmentDropdown(false)}
             >
               <Link 
-                to="/" 
+                to="/equipment" 
                 className={`flex items-center space-x-1 py-2 ${
                   location.pathname === '/equipment' || location.pathname.includes('gmdss-safety') || location.pathname.includes('navigational') || location.pathname.includes('communication-systems')
                     ? 'text-[#E9231B] border-b-2 border-[#E9231B]' 
@@ -199,15 +199,15 @@ to="/"
               {equipmentDropdown && (
                 <div className="absolute top-full left-0 w-72 bg-white rounded-lg shadow-xl border border-gray-100 py-3 z-50">
                   <Link 
-                    // to="/equipment" 
-                    to="/"
+                    to="/equipment" 
+                    // to="/"
                     className="block px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#E9231B] border-b border-gray-100 mb-1"
                   >
                     Marine Equipment Overview &rarr;
                   </Link>
                   <Link 
-                  // to="/gmdss-safety-equipment/"
-                  to="/"
+                  to="/gmdss-safety-equipment/"
+                  // to="/"
                    className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     GMDSS &amp; Safety Equipment
                   </Link>
@@ -298,8 +298,8 @@ to="/"
                 • Class Certification
               </Link>
               <Link 
-              to="/"
-              // to="/installation-integration/"
+              // to="/"
+              to="/installation-integration/"
                onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • Installation &amp; Integration
               </Link>
@@ -323,16 +323,17 @@ to="/"
           </div>
 
           <div className="py-2 border-b border-gray-100 space-y-2">
-            <Link to="/"
-              // to="/equipment" 
+            <Link 
+            // to="/"
+              to="/equipment" 
               onClick={() => setMobileMenuOpen(false)}
               className="block text-base font-bold text-[#071A35] hover:text-[#E9231B]"
             >
               Equipment Overview
             </Link>
             <div className="pl-4 space-y-2 text-sm text-gray-700">
-              <Link to="/"
-              //  to="/gmdss-safety-equipment/"
+              <Link
+               to="/gmdss-safety-equipment/"
                 onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • GMDSS &amp; Safety Equipment
               </Link>

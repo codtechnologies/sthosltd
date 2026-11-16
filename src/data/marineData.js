@@ -2,7 +2,7 @@ export const COMPANY_INFO = {
   name: "STHOS Limited",
   tagline: "Marine Communication & Navigation Systems",
   headquarters: "Port Harcourt, Rivers State, Nigeria",
-  addressPlaceholder: "Trans-Amadi Industrial Layout, Port Harcourt, Rivers State, Nigeria",
+  addressPlaceholder: "Port Harcourt, Rivers State, Nigeria",
   salesPhone: "+234 807 323 4834",
   technicalPhone: "+234 807 323 4834",
   emergencyHotline: "+234 807 323 4834",
