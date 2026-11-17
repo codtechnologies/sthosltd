@@ -11,7 +11,7 @@ export const COMPANY_INFO = {
   trainingEmail: "service@sthosltd.com",
   businessHours: "Monday – Friday: 10:00 AM – 5:00 PM WAT",
   emergencyAvailability: "24/7/365 On-Call Dispatch across Gulf of Guinea",
-  classSocieties: ["DNV", "ABS"],
+  classSocieties: ["DNV", "ABS", "BV", "LR"],
   brands: ["Furuno", "Sailor", "Icom"],
   heroImages: {
     bridge: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=80",

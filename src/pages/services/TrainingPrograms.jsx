@@ -136,7 +136,7 @@ export default function TrainingPrograms() {
                     "Classroom training at our Port Harcourt facility",
                     "Onboard vessel training",
                     "Hybrid (online + practical) programs",
-                    "Full-mission simulator sessions"
+                    "Full Mission Simulation Ssessions"
                   ].map((opt, idx) => (
                     <li key={idx} className="flex items-start space-x-2.5">
                       <CheckCircle className="w-4 h-4 text-[#123B67] shrink-0 mt-0.5" />

@@ -151,26 +151,23 @@ export default function Header() {
                     Class Certification
                   </Link>
                   <Link 
-                  // to="/installation-integration/"
-                  to="/"
+                  to="/installation-integration/"
+                  // to="/"
                    className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     Installation &amp; Integration
                   </Link>
                   <Link 
-                  // to="/maintenance-repair/"
-to="/"
+                  to="/maintenance-repair/"
                    className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     Maintenance &amp; Repair
                   </Link>
                   <Link 
-                  // to="/training-programs/"
-                  to="/"
+                  to="/training-programs/"
                    className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     Training Programs
                   </Link>
                   <Link 
-                  // to="/emergency-support/"
-                  to="/"
+                  to="/emergency-support/"
                    className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     Emergency Support
                   </Link>
@@ -212,14 +209,14 @@ to="/"
                     GMDSS &amp; Safety Equipment
                   </Link>
                   <Link 
-                  // to="/navigational-equipment/"
-                  to="/"
+                  to="/navigational-equipment/"
+                  // to="/"
                    className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     Navigational Equipment
                   </Link>
                   <Link 
-                  to="/"
-                  // to="/communication-systems/"
+                  // to="/"
+                  to="/communication-systems/"
                    className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F4F6F8] hover:text-[#E9231B] transition-colors">
                     Communication Systems
                   </Link>
@@ -303,19 +300,19 @@ to="/"
                onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • Installation &amp; Integration
               </Link>
-              <Link to="/"
-              // to="/maintenance-repair/"
+              <Link
+              to="/maintenance-repair/"
                onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • Maintenance &amp; Repair
               </Link>
-              <Link to="/"
-              // to="/training-programs/"
+              <Link
+              to="/training-programs/"
               onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • Training Programs
               </Link>
               <Link 
-              to="/"
-              // to="/emergency-support/"
+              // to="/"
+              to="/emergency-support/"
                onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • Emergency Support
               </Link>
@@ -337,13 +334,13 @@ to="/"
                 onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • GMDSS &amp; Safety Equipment
               </Link>
-              <Link to="/"
-              // to="/navigational-equipment/"
+              <Link
+              to="/navigational-equipment/"
                onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • Navigational Equipment
               </Link>
-              <Link to="/"
-              // to="/communication-systems/"
+              <Link
+              to="/communication-systems/"
                onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#E9231B]">
                 • Communication Systems
               </Link>
